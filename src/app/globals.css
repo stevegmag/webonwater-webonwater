@@ -1,12 +1,26 @@
-/* @import "tailwindcss"; */
-@tailwind base;
+@import "tailwindcss";
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ededed;
+  --foreground: #04152d;
+  
+  --color-primary: #577a99;
+  --color-secondary: #2c3e50;
+  --color-dark:  #233140;
+/* logo colors */
+  --color-light-blue: #16b3d2;
+  --color-med-blue: #018dbc;
+  --color-dark-blue: #005680;
+  --color-dark-flatblue: #385a6b;
+  /* --color-light-khaki: #f9f5f2; */
+  --color-light-khaki: #f8f6f1;
+
+  --color-text: #ededed;
+  --color-text-dark: #04152d;
 }
 
 @theme inline {
@@ -18,7 +32,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #04152d;
     --foreground: #ededed;
   }
 }
@@ -26,5 +40,77 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-light-khaki);
+  color: var(--color-dark-flatblue);
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  position: relative;
+  z-index: 10;
+  /* top: 128px; */
+}
+
+section {
+  position: relative;
+  z-index: 10;
+} 
+
+._topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, .7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+._bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, .7);
+  filter: blur(100px);
+  z-index: 0;
+}
+.wow-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.logo-name {
+  font-size: 36px;
+}
+
+/* We're replacing this with Next.js Image component
+span.logo {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin-right: 8px;
+  background-image: url('/web_on_water_logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+*/
