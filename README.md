@@ -29,8 +29,49 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### GitHub Pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is configured to deploy to GitHub Pages for preview purposes. To deploy manually:
+
+1. Install the required dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run the GitHub Pages deployment script:
+   ```bash
+   npm run deploy:github
+   ```
+
+Alternatively, pushing to the `main` branch will trigger automatic deployment via GitHub Actions.
+
+### Vercel (Production)
+
+For production deployment, this project uses Vercel. To deploy manually:
+
+1. Install the Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Login to Vercel:
+   ```bash
+   vercel login
+   ```
+
+3. Deploy to production:
+   ```bash
+   npm run deploy:vercel
+   ```
+
+For CI/CD setup with Vercel:
+
+1. Create a new project in Vercel and connect it to your GitHub repository
+2. Add the following secrets to your GitHub repository:
+   - `VERCEL_TOKEN`: Your Vercel API token
+   - `VERCEL_ORG_ID`: Your Vercel organization ID
+   - `VERCEL_PROJECT_ID`: Your Vercel project ID
+
+Pushing to the `main` branch will trigger automatic deployment to Vercel.

@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export -o out",
+    "deploy:github": "npm run export && touch out/.nojekyll && gh-pages -d out -t true",
+    "deploy:vercel": "vercel --prod"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -26,8 +29,10 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vercel": "^33.5.1"
   }
 }
