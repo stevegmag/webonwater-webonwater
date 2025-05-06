@@ -13,22 +13,14 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false # Required for JamesIves/github-pages-deploy-action
 
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v3
         with:
           node-version: '20'
           cache: 'npm'
-
-      - name: Cache Next.js build
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: Install dependencies 📦
         run: npm ci
@@ -38,13 +30,9 @@ jobs:
           echo "GITHUB_PAGES=true" >> $GITHUB_ENV
           npm run build
           
-          # Check if out directory exists, if not create it
-          if [ -d "out" ]; then
-            echo "Using existing out directory"
-          else
-            echo "Creating out directory"
-            mkdir -p out
-          fi
+          # Debug: List contents of the output directory
+          echo "Contents of the output directory:"
+          ls -la out/
           
           # Create .nojekyll file
           touch out/.nojekyll
@@ -54,4 +42,5 @@ jobs:
         with:
           folder: out
           branch: gh-pages
+          clean: true  # Automatically remove deleted files from the deploy branch
           token: ${{ secrets.GITHUB_TOKEN }}  # Use the automatically provided token
