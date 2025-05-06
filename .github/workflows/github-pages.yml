@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # This is important for allowing the action to push to your repository
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
@@ -53,16 +55,11 @@ jobs:
           echo "Listing directories:"
           ls -la
 
-      - name: Clean up any existing worktree
-        run: |
-          if git worktree list | grep -q "github-pages-deploy-action-temp-deployment-folder"; then
-            git worktree remove github-pages-deploy-action-temp-deployment-folder --force || true
-          fi
+
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
           branch: gh-pages
-          clean: true
-          single-commit: true
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the automatically provided token
