@@ -14,8 +14,7 @@ const nextConfig: NextConfig = {
   assetPrefix: isGithubPages ? `/${repoName}/` : '',
   // Ensure trailingSlash is true for GitHub Pages
   trailingSlash: isGithubPages ? true : false,
-  // Set distDir to 'out' for GitHub Pages
-  distDir: isGithubPages ? 'out' : '.next',
+  // Don't set distDir - let Next.js use its default
   images: {
     unoptimized: true,
   },

@@ -30,58 +30,44 @@ jobs:
           echo "GITHUB_PAGES=true" >> $GITHUB_ENV
           npm run build
           
-          # Debug: Find the output directory
-          echo "Looking for output directory:"
-          find . -type d -name "out" -o -name ".next"
+          # Debug: Find the output directory and list HTML files
+          echo "Looking for HTML files:"
+          find . -type f -name "*.html" | sort
           
-          # Check if .next/standalone exists (Next.js 15 output format)
-          if [ -d ".next/standalone" ]; then
-            echo "Found '.next/standalone' directory"
-            mkdir -p out
-            cp -r .next/standalone/* out/
-            cp -r .next/static out/.next/
-            touch out/.nojekyll
-            
-            # Create index.html if it doesn't exist
-            if [ ! -f "out/index.html" ]; then
-              echo "Creating index.html file"
-              echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=app/page.html"></head><body>Redirecting...</body></html>' > out/index.html
-            fi
-            
-            echo "Contents of 'out' directory after copying:"
-            ls -la out/
-          # Check if .next exists
-          elif [ -d ".next" ]; then
-            echo "Found '.next' directory"
-            mkdir -p out
-            cp -r .next/* out/
-            touch out/.nojekyll
-            
-            # Create index.html if it doesn't exist
-            if [ ! -f "out/index.html" ]; then
-              echo "Creating index.html file"
-              echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=app/page.html"></head><body>Redirecting...</body></html>' > out/index.html
-            fi
-            
-            echo "Contents of 'out' directory after copying:"
-            ls -la out/
-          # Check if out exists
-          elif [ -d "out" ]; then
-            echo "Found 'out' directory"
-            touch out/.nojekyll
-            
-            # Create index.html if it doesn't exist
-            if [ ! -f "out/index.html" ]; then
-              echo "Creating index.html file"
-              echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=app/page.html"></head><body>Redirecting...</body></html>' > out/index.html
-            fi
-            
-            echo "Contents of 'out' directory:"
-            ls -la out/
-          else
-            echo "No output directory found!"
-            exit 1
+          # Prepare the out directory
+          mkdir -p out
+          
+          # Copy the build output to out directory
+          if [ -d ".next/static" ]; then
+            cp -r .next/static out/
           fi
+          
+          # Find all HTML files and copy them to out
+          find . -type f -name "*.html" -not -path "./out/*" -not -path "./node_modules/*" -exec cp {} out/ \;
+          
+          # Create a simple index.html that loads your app's JavaScript
+          echo '<!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Web on Water</title>
+            <script>
+              // Redirect to the correct page based on what files we actually have
+              window.location.href = "/webonwater-webonwater/";
+            </script>
+          </head>
+          <body>
+            <h1>Web on Water</h1>
+            <p>Loading...</p>
+          </body>
+          </html>' > out/index.html
+          
+          # Create .nojekyll file
+          touch out/.nojekyll
+          
+          echo "Contents of 'out' directory:"
+          ls -la out/
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
