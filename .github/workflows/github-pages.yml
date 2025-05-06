@@ -35,7 +35,21 @@ jobs:
         run: |
           echo "GITHUB_PAGES=true" >> $GITHUB_ENV
           npm run build
+          
+          # Check if out directory exists, if not create it
+          if [ -d "out" ]; then
+            echo "Using existing out directory"
+          else
+            echo "Creating out directory"
+            mkdir -p out
+          fi
+          
+          # Create .nojekyll file
           touch out/.nojekyll
+          
+          # List directories to debug
+          echo "Listing directories:"
+          ls -la
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4

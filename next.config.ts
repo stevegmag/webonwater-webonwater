@@ -12,6 +12,20 @@ const nextConfig: NextConfig = {
   images: isGithubPages ? {
     unoptimized: true,
   } : {},
+  // Ensure distDir is set to 'out' for GitHub Pages
+  distDir: isGithubPages ? 'out' : '.next',
+  
+  // Enable source maps in production for better error tracking
+  productionBrowserSourceMaps: isProduction,
+  
+  // Disable React StrictMode in production for better performance
+  reactStrictMode: !isProduction,
+  
+  // Compress assets in production
+  compress: isProduction,
+  
+  // Disable powered by header in production
+  poweredByHeader: !isProduction,
 };
 
 export default nextConfig;
