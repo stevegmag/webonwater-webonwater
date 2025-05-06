@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Fetch all history for git worktree
 
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v3
@@ -50,12 +48,6 @@ jobs:
           
           # Create .nojekyll file
           touch out/.nojekyll
-          
-          # List directories to debug
-          echo "Listing directories:"
-          ls -la
-
-
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
