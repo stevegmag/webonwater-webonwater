@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build",
-    "deploy:github": "GITHUB_PAGES=true npm run build && touch out/.nojekyll && echo 'Custom debug message' > out/debug.txt && gh-pages -d out -t true"
+    "deploy:github": "GITHUB_PAGES=true npm run build && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
