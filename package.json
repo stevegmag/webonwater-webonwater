@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build",
-    "deploy:github": "GITHUB_PAGES=true npm run build && touch out/.nojekyll && gh-pages -d out -t true",
-    "deploy:vercel": "vercel --prod"
+    "deploy:github": "GITHUB_PAGES=true npm run build && touch out/.nojekyll && echo 'Custom debug message' > out/debug.txt && gh-pages -d out -t true"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -29,10 +28,8 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
-    "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "vercel": "^33.7.1"
+    "typescript": "^5"
   }
 }

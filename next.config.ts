@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
   // Configure basePath and assetPrefix for GitHub Pages
   basePath: isGithubPages ? `/${repoName}` : '',
   assetPrefix: isGithubPages ? `/${repoName}/` : '',
+  // Ensure trailingSlash is true for GitHub Pages
+  trailingSlash: isGithubPages ? true : false,
+  // Set distDir to 'out' for GitHub Pages
+  distDir: isGithubPages ? 'out' : '.next',
   images: {
     unoptimized: true,
   },

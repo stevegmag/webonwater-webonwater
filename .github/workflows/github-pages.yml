@@ -39,8 +39,15 @@ jobs:
             echo "Found '.next/standalone' directory"
             mkdir -p out
             cp -r .next/standalone/* out/
-            cp -r .next/static out/
+            cp -r .next/static out/.next/
             touch out/.nojekyll
+            
+            # Create index.html if it doesn't exist
+            if [ ! -f "out/index.html" ]; then
+              echo "Creating index.html file"
+              echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=app/page.html"></head><body>Redirecting...</body></html>' > out/index.html
+            fi
+            
             echo "Contents of 'out' directory after copying:"
             ls -la out/
           # Check if .next exists
@@ -49,12 +56,26 @@ jobs:
             mkdir -p out
             cp -r .next/* out/
             touch out/.nojekyll
+            
+            # Create index.html if it doesn't exist
+            if [ ! -f "out/index.html" ]; then
+              echo "Creating index.html file"
+              echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=app/page.html"></head><body>Redirecting...</body></html>' > out/index.html
+            fi
+            
             echo "Contents of 'out' directory after copying:"
             ls -la out/
           # Check if out exists
           elif [ -d "out" ]; then
             echo "Found 'out' directory"
             touch out/.nojekyll
+            
+            # Create index.html if it doesn't exist
+            if [ ! -f "out/index.html" ]; then
+              echo "Creating index.html file"
+              echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=app/page.html"></head><body>Redirecting...</body></html>' > out/index.html
+            fi
+            
             echo "Contents of 'out' directory:"
             ls -la out/
           else
