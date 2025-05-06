@@ -8,19 +8,19 @@ export default function Footer() {
           {/* Company info column - 25% width on desktop */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-6">
             <h3 className="text-xl font-bold mb-4">WebOnWater</h3>
-            <p className="mb-4">Fixing the web, one site at a time!</p>
+            <p className="px-2 mb-4">Fixing the web, one site at a time!</p>
             <br />
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p>
+            <p className="px-2">
               <a href="mailto:info@webonwater.com" className="hover:underline">info@webonwater.com</a>
             </p>
-            <p>123 Web Street, Digital City</p>            
+            <p className="px-2">123 Web Street, Digital City</p>            
           </div>
           
           {/* Quick links column - 25% width on desktop */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-6">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <ul className="px-2 space-y-2">
               <li><Link href="/" className="hover:underline">Home</Link></li>
               <li><Link href="/about" className="hover:underline">About</Link></li>
               <li><Link href="/services" className="hover:underline">Services</Link></li>
