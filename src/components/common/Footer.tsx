@@ -4,12 +4,21 @@ export default function Footer() {
   return (
     <footer className="bg-secondary text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+        <div className="flex flex-col md:flex-row flex-wrap">
+          {/* Company info column - 25% width on desktop */}
+          <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-6">
             <h3 className="text-xl font-bold mb-4">WebOnWater</h3>
-            <p className="mb-4">Creating beautiful web experiences.</p>
+            <p className="mb-4">Fixing the web, one site at a time!</p>
+            <br />
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <p>
+              <a href="mailto:info@webonwater.com" className="hover:underline">info@webonwater.com</a>
+            </p>
+            <p>123 Web Street, Digital City</p>            
           </div>
-          <div>
+          
+          {/* Quick links column - 25% width on desktop */}
+          <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-6">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li><Link href="/" className="hover:underline">Home</Link></li>
@@ -19,10 +28,28 @@ export default function Footer() {
               <li><Link href="/contact" className="hover:underline">Contact</Link></li>
             </ul>
           </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p>info@webonwater.com</p>
-            <p>123 Web Street, Digital City</p>
+          
+          {/* Technologies column - 50% width on desktop */}
+          <div className="w-full md:w-2/4">
+            <h4 className="text-lg font-semibold mb-4">Specializing in the following stacks / platforms:</h4>
+            <div className="px-4 grid grid-cols-2 gap-2">
+              <div>
+                <ul className="space-y-2">
+                  <li>React | Next</li>
+                  <li>Vue | Nuxt</li>
+                  <li>PHP | Laravel</li>
+                  <li>HTML | CSS | JavaScript</li>
+                </ul>
+              </div>
+              <div>
+                <ul className="space-y-2">
+                  <li>Astro | Vite</li>
+                  <li>Drupal | WordPress | Custom CMS</li>
+                  <li>Shopify | WooCommerce | HubSpot</li>
+                  <li>Squarespace | Wix</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
