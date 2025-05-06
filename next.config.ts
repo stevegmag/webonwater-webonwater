@@ -12,11 +12,11 @@ const nextConfig: NextConfig = {
   // Configure basePath and assetPrefix for GitHub Pages
   basePath: isGithubPages ? `/${repoName}` : '',
   assetPrefix: isGithubPages ? `/${repoName}/` : '',
-  images: isGithubPages ? {
+  images: {
     unoptimized: true,
-  } : {},
-  // Ensure distDir is set to 'out' for GitHub Pages
-  distDir: isGithubPages ? 'out' : '.next',
+  },
+  // Do NOT set distDir for GitHub Pages - let Next.js use its default
+  // distDir: isGithubPages ? 'out' : '.next',
   
   // Enable source maps in production for better error tracking
   productionBrowserSourceMaps: isProduction,

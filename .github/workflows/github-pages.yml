@@ -30,17 +30,30 @@ jobs:
           echo "GITHUB_PAGES=true" >> $GITHUB_ENV
           npm run build
           
-          # Debug: List contents of the output directory
-          echo "Contents of the output directory:"
-          ls -la out/
+          # Debug: Find the output directory
+          echo "Looking for output directory:"
+          find . -type d -name "out" -o -name ".next"
           
-          # Create .nojekyll file
-          touch out/.nojekyll
+          # Create .nojekyll file in the correct output directory
+          if [ -d "out" ]; then
+            echo "Found 'out' directory"
+            touch out/.nojekyll
+            echo "Contents of 'out' directory:"
+            ls -la out/
+          elif [ -d ".next" ]; then
+            echo "Found '.next' directory"
+            touch .next/.nojekyll
+            echo "Contents of '.next' directory:"
+            ls -la .next/
+          else
+            echo "No output directory found!"
+            exit 1
+          fi
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out
+          folder: out  # This should match the output directory from the build step
           branch: gh-pages
           clean: true  # Automatically remove deleted files from the deploy branch
           token: ${{ secrets.GITHUB_TOKEN }}  # Use the automatically provided token
