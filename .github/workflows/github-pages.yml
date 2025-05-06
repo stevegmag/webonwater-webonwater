@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history for git worktree
 
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v3
@@ -51,8 +53,16 @@ jobs:
           echo "Listing directories:"
           ls -la
 
+      - name: Clean up any existing worktree
+        run: |
+          if git worktree list | grep -q "github-pages-deploy-action-temp-deployment-folder"; then
+            git worktree remove github-pages-deploy-action-temp-deployment-folder --force || true
+          fi
+
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
           branch: gh-pages
+          clean: true
+          single-commit: true
