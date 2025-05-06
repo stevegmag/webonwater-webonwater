@@ -45,7 +45,7 @@ This project is configured to deploy to GitHub Pages for preview purposes. To de
    npm run deploy:github
    ```
 
-Alternatively, pushing to the `main` branch will trigger automatic deployment via GitHub Actions.
+Alternatively, pushing to the `develop` branch will trigger automatic deployment via GitHub Actions.
 
 ### Vercel (Production)
 
