@@ -15,8 +15,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Do NOT set distDir for GitHub Pages - let Next.js use its default
-  // distDir: isGithubPages ? 'out' : '.next',
   
   // Enable source maps in production for better error tracking
   productionBrowserSourceMaps: isProduction,

@@ -34,17 +34,29 @@ jobs:
           echo "Looking for output directory:"
           find . -type d -name "out" -o -name ".next"
           
-          # Create .nojekyll file in the correct output directory
-          if [ -d "out" ]; then
+          # Check if .next/standalone exists (Next.js 15 output format)
+          if [ -d ".next/standalone" ]; then
+            echo "Found '.next/standalone' directory"
+            mkdir -p out
+            cp -r .next/standalone/* out/
+            cp -r .next/static out/
+            touch out/.nojekyll
+            echo "Contents of 'out' directory after copying:"
+            ls -la out/
+          # Check if .next exists
+          elif [ -d ".next" ]; then
+            echo "Found '.next' directory"
+            mkdir -p out
+            cp -r .next/* out/
+            touch out/.nojekyll
+            echo "Contents of 'out' directory after copying:"
+            ls -la out/
+          # Check if out exists
+          elif [ -d "out" ]; then
             echo "Found 'out' directory"
             touch out/.nojekyll
             echo "Contents of 'out' directory:"
             ls -la out/
-          elif [ -d ".next" ]; then
-            echo "Found '.next' directory"
-            touch .next/.nojekyll
-            echo "Contents of '.next' directory:"
-            ls -la .next/
           else
             echo "No output directory found!"
             exit 1
