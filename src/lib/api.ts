@@ -20,7 +20,7 @@ export async function fetchData(endpoint: string) {
 /**
  * Simulates sending data to an API
  */
-export async function sendData(endpoint: string, data: any) {
+export async function sendData(endpoint: string, data: Record<string, unknown>) {
   // In a real app, this would be a POST request to your API
   console.log(`Sending to ${endpoint}:`, data);
   
