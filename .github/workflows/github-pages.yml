@@ -17,11 +17,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '18'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       # Add Next.js build cache
       - name: Cache Next.js build
@@ -42,11 +42,14 @@ jobs:
           # Build the project
           npm run build
           
+          # Export the project
+          npm run export
+          
           # Create .nojekyll file to bypass Jekyll processing
           touch out/.nojekyll
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           folder: out
           branch: gh-pages
