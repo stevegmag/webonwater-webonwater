@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Wave background -->
+  <rect width="80" height="80" rx="10" fill="#f9f5f2"/>
+  
+  <!-- Waves -->
+  <path d="M10 40 Q20 30, 30 40 Q40 50, 50 40 Q60 30, 70 40" stroke="#16b3d2" stroke-width="3" fill="none"/>
+  <path d="M10 50 Q20 40, 30 50 Q40 60, 50 50 Q60 40, 70 50" stroke="#018dbc" stroke-width="3" fill="none"/>
+  <path d="M10 60 Q20 50, 30 60 Q40 70, 50 60 Q60 50, 70 60" stroke="#005680" stroke-width="3" fill="none"/>
+  
+  <!-- Text -->
+  <text x="40" y="25" font-family="Arial" font-size="10" text-anchor="middle" fill="#385a6b" font-weight="bold">WEB ON</text>
+  <text x="40" y="35" font-family="Arial" font-size="10" text-anchor="middle" fill="#385a6b" font-weight="bold">WATER</text>
+</svg>
