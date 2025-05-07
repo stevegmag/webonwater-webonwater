@@ -1,6 +1,6 @@
 # Deployment Scripts
 
-This directory contains utility scripts for deploying and testing the Next.js application.
+This directory contains utility scripts for deploying and testing the Next.js TypeScript application.
 
 ## Available Scripts
 
@@ -11,7 +11,7 @@ Tests the export process for GitHub Pages deployment. This script:
 - Builds the Next.js application with static export
 - Creates the `out` directory if it doesn't exist
 - Creates a .nojekyll file in the output directory
-- Copies public assets to the output directory
+- Copies the public directory to the output directory
 
 Run with:
 ```bash
@@ -40,10 +40,29 @@ Helps diagnose build issues by providing detailed information about the build pr
 - Runs the build process with verbose logging
 - Checks if the output directory was created
 - Shows directory contents at each stage
+- Properly copies the public directory to ensure assets are available
 
 Run with:
 ```bash
 npm run debug:build
+```
+
+## TypeScript Asset Utilities
+
+This project includes TypeScript utilities for handling asset paths correctly across environments:
+
+- `src/utils/imageUtils.ts`: Contains utility functions that correctly prefix asset paths based on the environment
+
+To use these utilities:
+
+```tsx
+import { getImagePath, getMediaUrl } from '@/utils/imageUtils';
+
+// For images
+<img src={getImagePath('/images/logo.png')} alt="Logo" />
+
+// For videos
+<video src={getMediaUrl('/videos/demo.mp4')} />
 ```
 
 ## Usage Notes
@@ -52,3 +71,4 @@ npm run debug:build
 - These scripts are meant for local testing and verification
 - The GitHub Actions workflow handles deployment automatically
 - If deployment fails, try running the debug script to diagnose the issue
+- Always use the TypeScript utilities for referencing assets from the public directory

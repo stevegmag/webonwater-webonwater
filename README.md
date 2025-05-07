@@ -23,23 +23,42 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deployment Workflows
+## Handling Public Assets
 
-### GitHub Pages
+This project uses a special approach to handle static assets (images, videos, etc.) when deploying to GitHub Pages. Due to the subdirectory path structure of GitHub Pages, standard references to public assets won't work correctly.
 
-The project is set up to automatically deploy to GitHub Pages when code is pushed to the `develop` branch. The deployment workflow:
+### Using the Image Utility
 
-1. Builds the Next.js application with static export
-2. Creates the output directory structure
-3. Creates a `.nojekyll` file to prevent GitHub Pages from ignoring underscore files
-4. Copies all files from the `public` directory to ensure images and videos are included
-5. Deploys to the `gh-pages` branch
+For any images, videos, or other assets from the public folder, use the provided TypeScript utility functions:
 
-For manual deployment to GitHub Pages, run:
+```tsx
+import { getImagePath, getMediaUrl } from '@/utils/imageUtils';
 
-```bash
-npm run deploy:github
+// In your component:
+const MyComponent: React.FC = () => {
+  return (
+    <>
+      <img src={getImagePath('/images/example.jpg')} alt="Example" />
+      <video>
+        <source src={getMediaUrl('/videos/example.mp4')} type="video/mp4" />
+      </video>
+      <div style={{ backgroundImage: `url(${getImagePath('/images/bg.jpg')})` }}>
+        Background Image
+      </div>
+    </>
+  );
+};
 ```
+
+This ensures your assets will work correctly in both development and production environments.
+
+### How It Works
+
+The TypeScript utility function adds the correct base path prefix to your assets depending on the environment:
+- In development: `/images/example.jpg`
+- On GitHub Pages: `/webonwater-webonwater/images/example.jpg`
+
+See the `ImageExample.tsx` component for more examples of proper asset usage in TypeScript.
 
 ### Vercel
 

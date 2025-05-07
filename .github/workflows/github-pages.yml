@@ -29,6 +29,7 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: true
+          NODE_ENV: production
 
       - name: "Debug directory contents"
         run: |
@@ -44,10 +45,16 @@ jobs:
           
       - name: "Add .nojekyll file"
         run: touch out/.nojekyll
-        
-      - name: "Copy public directory contents to out"
-        run: cp -r public/* out/ || true
 
+      - name: "Copy public directory to out if it doesn't exist in output"
+        run: |
+          if [ ! -d "out/public" ]; then
+            echo "Copying public directory to out..."
+            cp -r public out/ || true
+          else
+            echo "Public directory already exists in out folder"
+          fi
+        
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

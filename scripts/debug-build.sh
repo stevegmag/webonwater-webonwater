@@ -53,10 +53,10 @@ echo "Creating .nojekyll file..."
 touch out/.nojekyll
 
 # Copy public assets
-echo "Copying public assets to out directory..."
+echo "Copying public directory to out..."
 if [ -d "public" ]; then
-  cp -r public/* out/ || true
-  echo "✅ Public assets copied."
+  cp -r public out/
+  echo "✅ Public directory copied."
 else
   echo "❌ Public directory does not exist."
 fi
