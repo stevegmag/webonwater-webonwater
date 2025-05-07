@@ -44,7 +44,7 @@ export default function Hero() {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Lost? Adrift? Broken?
+        Broken? Lost? Adrift?
         </h1>
         <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase">
           We fix broken websites!

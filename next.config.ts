@@ -1,23 +1,18 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
 
-const isGithubPages = process.env.GITHUB_PAGES === 'true';
-const repoName = 'webonwater-webonwater';
-
-const nextConfig: NextConfig = {
-  // Set output to 'export' for static site generation
-  output: isGithubPages ? 'export' : undefined,
+const nextConfig = {
+  reactStrictMode: true,
+  // This ensures your site works on GitHub Pages which uses a subdirectory
+  basePath: process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES === 'true' ? '/webonwater-webonwater' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES === 'true' ? '/webonwater-webonwater/' : '',
   
-  // Configure basePath and assetPrefix for GitHub Pages
-  basePath: isGithubPages ? `/${repoName}` : '',
-  assetPrefix: isGithubPages ? `/${repoName}/` : '',
+  // Enable static exports
+  output: "export",
   
-  // Enable trailing slashes for GitHub Pages
-  trailingSlash: isGithubPages,
-  
-  // Disable image optimization for static export
+  // Images configuration for static export
   images: {
     unoptimized: true,
-  }
-};
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig

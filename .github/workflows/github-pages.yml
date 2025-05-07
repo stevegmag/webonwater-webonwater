@@ -5,14 +5,15 @@ on:
     branches: [ develop ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -21,36 +22,17 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      # Add Next.js build cache
-      - name: Cache Next.js build
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+      - name: Build
+        run: npm run build
 
-      - name: Build for GitHub Pages
-        run: |
-          # Set environment variable for GitHub Pages
-          echo "GITHUB_PAGES=true" >> $GITHUB_ENV
-          
-          # Build the project
-          npm run build
-          
-          # Export the project
-          npm run export
-          
-          # Create .nojekyll file to bypass Jekyll processing
-          touch out/.nojekyll
+      - name: Export static files
+        run: npm run export
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out
-          branch: gh-pages
-          clean: true
+          folder: out # The folder the action should deploy
+          branch: gh-pages # The branch the action should deploy to
+          clean: true # Automatically remove deleted files from the deployment branch
