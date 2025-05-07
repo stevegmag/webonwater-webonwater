@@ -35,26 +35,31 @@ jobs:
         run: |
           echo "Current directory:"
           ls -la
-          echo "Out directory (if exists):"
+          echo "Out directory contents:"
           ls -la out || echo "Out directory does not exist"
-          echo ".next directory (if exists):"
-          ls -la .next || echo ".next directory does not exist"
+          echo "Public directory contents:"
+          ls -la public || echo "Public directory does not exist"
 
-      - name: "Create out directory if it doesn't exist"
-        run: mkdir -p out
-          
-      - name: "Add .nojekyll file"
+      - name: "Ensure .nojekyll file exists"
         run: touch out/.nojekyll
 
-      - name: "Copy public directory to out if it doesn't exist in output"
+      # Critical step: Make sure images and videos are at the expected paths
+      - name: "Copy images and videos to expected locations"
         run: |
-          if [ ! -d "out/public" ]; then
-            echo "Copying public directory to out..."
-            cp -r public out/ || true
-          else
-            echo "Public directory already exists in out folder"
-          fi
-        
+          # Copy images to root level of out
+          mkdir -p out/images
+          cp -r public/images/* out/images/ || true
+          
+          # Copy videos to root level of out
+          mkdir -p out/videos
+          cp -r public/videos/* out/videos/ || true
+          
+          # Also keep a copy of public for reference
+          cp -r public out/ || true
+          
+          echo "Final directory structure:"
+          find out -type f | sort
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

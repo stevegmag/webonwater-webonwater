@@ -18,8 +18,14 @@ export function getImagePath(path: string): string {
   const isGitHubPages = typeof window !== 'undefined' && 
     window.location.hostname.includes('github.io');
   
-  // Add base path for GitHub Pages
+  // For GitHub Pages, try both the root and directly in images
   if (isGitHubPages) {
+    // If the path already starts with /images or /videos, don't add another layer
+    if (normalizedPath.startsWith('/images/') || normalizedPath.startsWith('/videos/')) {
+      return `/webonwater-webonwater${normalizedPath}`;
+    } 
+    
+    // Otherwise, assume it's just a filename that needs to be in images/ or videos/
     return `/webonwater-webonwater${normalizedPath}`;
   }
   
@@ -36,15 +42,3 @@ export function getImagePath(path: string): string {
 export function getMediaUrl(path: string): string {
   return getImagePath(path);
 }
-
-/**
- * Example usage:
- * 
- * import { getImagePath } from '@/utils/imageUtils';
- * 
- * function MyComponent() {
- *   return (
- *     <img src={getImagePath('/images/logo.png')} alt="Logo" />
- *   );
- * }
- */
