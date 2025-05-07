@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Button from '@/components/common/Button';
 import { useEffect, useState } from 'react';
+import { getMediaUrl } from '@/utils/imageUtils';
 
 export default function Hero() {
   const [isMobile, setIsMobile] = useState(true);
@@ -37,7 +38,7 @@ export default function Hero() {
             playsInline
             className="absolute w-full h-full object-cover opacity-40"
           >
-            <source src="/videos/hero-background.mp4" type="video/mp4" />
+            <source src={getMediaUrl('/videos/hero-background.mp4')} type="video/mp4" />
           </video>
         </div>
       )}

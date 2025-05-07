@@ -1,12 +1,10 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { NextFont } from "next/dist/compiled/@next/font";
+import { useEffect, useState } from 'react';
 import { Cherry_Cream_Soda } from "next/font/google";
+import { getImagePath } from '@/utils/imageUtils';
 
-const cherryCreamSoda: NextFont = Cherry_Cream_Soda({ subsets: ['latin'], weight: '400' }); 
+const cherryCreamSoda = Cherry_Cream_Soda({ subsets: ['latin'], weight: '400' });
 
 /*
 Fugaz One
@@ -49,7 +47,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-1 flex justify-between items-center">
         <Link href="/" className="wow-logo flex items-center">
           <Image 
-            src="/web_on_water_logo.png" 
+            src={getImagePath('/web_on_water_logo.png')}
             alt="Web on Water Logo"
             width={120} 
             height={120}
