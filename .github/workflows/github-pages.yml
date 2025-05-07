@@ -29,6 +29,12 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: true
+          
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll
+        
+      - name: Copy public directory contents to out
+        run: cp -r public/* out/ || true
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

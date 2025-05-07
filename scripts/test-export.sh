@@ -14,6 +14,10 @@ npm run build
 # Create .nojekyll file to prevent Jekyll processing
 touch out/.nojekyll
 
+# Copy all files from public directory to out directory
+echo "Copying public assets to out directory..."
+cp -r public/* out/ || true
+
 # Report success
 echo "✅ Export completed successfully!"
 echo "Static files are available in the 'out' directory"
