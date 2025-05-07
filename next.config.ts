@@ -14,9 +14,8 @@ const nextConfig = {
     unoptimized: true,
   },
   
-  // Copy public folder contents to the output directory
-  // This ensures all assets in public are properly copied to the out directory
-  distDir: process.env.GITHUB_PAGES === 'true' ? '.next-gh-pages' : '.next',
+  // Explicitly set the output directory
+  distDir: '.next',
   
   // Disable trailing slashes
   trailingSlash: false,

@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy:github": "GITHUB_PAGES=true next build && touch out/.nojekyll && cp -r public/* out/ && git add out/ && git commit -m \"Deploy to GitHub Pages\" && git subtree push --prefix out origin gh-pages",
+    "deploy:github": "GITHUB_PAGES=true next build && mkdir -p out && touch out/.nojekyll && cp -r public/* out/ && git add out/ && git commit -m \"Deploy to GitHub Pages\" && git subtree push --prefix out origin gh-pages",
     "deploy:vercel": "vercel --prod",
     "test:export": "bash ./scripts/test-export.sh",
-    "verify:assets": "bash ./scripts/verify-public-assets.sh"
+    "verify:assets": "bash ./scripts/verify-public-assets.sh",
+    "debug:build": "bash ./scripts/debug-build.sh"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

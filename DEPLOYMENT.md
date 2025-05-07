@@ -22,11 +22,12 @@ npm run deploy:github
 ```
 
 This script will:
-1. Build the Next.js application
-2. Export static files
+1. Build the Next.js application with static export (using `output: 'export'` in next.config.js)
+2. Create the `out` directory if it doesn't exist
 3. Add a `.nojekyll` file to prevent GitHub Pages from using Jekyll processing
-4. Commit the changes to the repository
-5. Push the `/out` directory to the `gh-pages` branch
+4. Copy all public assets to the `out` directory
+5. Commit the changes to the repository
+6. Push the `/out` directory to the `gh-pages` branch
 
 ## Vercel Deployment
 

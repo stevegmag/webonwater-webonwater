@@ -1,6 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Project with Automated Deployment
 
-## Getting Started
+This Next.js project is configured with CI/CD pipelines to automatically deploy to GitHub Pages and Vercel.
+
+## Deployment Setup
+
+- **GitHub Pages**: Automatically deploys from the `develop` branch to https://stevegmag.github.io/webonwater-webonwater
+- **Vercel**: Automatically deploys from the `main` branch (once Vercel is configured)
+
+## Development
 
 First, run the development server:
 
@@ -16,62 +23,61 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deployment
+## Deployment Workflows
 
 ### GitHub Pages
 
-This project is configured to deploy to GitHub Pages for preview purposes. To deploy manually:
+The project is set up to automatically deploy to GitHub Pages when code is pushed to the `develop` branch. The deployment workflow:
 
-1. Install the required dependencies:
-   ```bash
-   npm install
-   ```
+1. Builds the Next.js application with static export
+2. Creates the output directory structure
+3. Creates a `.nojekyll` file to prevent GitHub Pages from ignoring underscore files
+4. Copies all files from the `public` directory to ensure images and videos are included
+5. Deploys to the `gh-pages` branch
 
-2. Run the GitHub Pages deployment script:
-   ```bash
-   npm run deploy:github
-   ```
+For manual deployment to GitHub Pages, run:
 
-Alternatively, pushing to the `develop` branch will trigger automatic deployment via GitHub Actions.
+```bash
+npm run deploy:github
+```
 
-### Vercel (Production)
+### Vercel
 
-For production deployment, this project uses Vercel. To deploy manually:
+The project is also configured to deploy to Vercel when code is pushed to the `main` branch (requires Vercel configuration).
 
-1. Install the Vercel CLI:
-   ```bash
-   npm install -g vercel
-   ```
+For manual deployment to Vercel, run:
 
-2. Login to Vercel:
-   ```bash
-   vercel login
-   ```
+```bash
+npm run deploy:vercel
+```
 
-3. Deploy to production:
-   ```bash
-   npm run deploy:vercel
-   ```
+## Utility Scripts
 
-For CI/CD setup with Vercel:
+Several utility scripts are available in the `scripts` directory to help with deployment and testing:
 
-1. Create a new project in Vercel and connect it to your GitHub repository
-2. Add the following secrets to your GitHub repository:
-   - `VERCEL_TOKEN`: Your Vercel API token
-   - `VERCEL_ORG_ID`: Your Vercel organization ID
-   - `VERCEL_PROJECT_ID`: Your Vercel project ID
+- `npm run test:export` - Test the export process locally
+- `npm run verify:assets` - Verify that public assets are correctly copied
+- `npm run debug:build` - Diagnose build issues with detailed logging
 
-Pushing to the `main` branch will trigger automatic deployment to Vercel.
+## Project Structure
+
+```
+.
+├── .github/workflows/  # GitHub Actions workflows
+├── public/             # Static assets (images, videos, etc.)
+├── scripts/            # Utility scripts for deployment
+├── src/                # Next.js application code
+├── .gitignore
+├── DEPLOYMENT.md       # Detailed deployment instructions
+├── next.config.js      # Next.js configuration
+├── package.json
+└── README.md           # This file
+```
+
+## Important Notes
+
+- The GitHub Pages deployment requires the `gh-pages` branch to be set as the publishing source in GitHub repository settings.
+- For local testing of the build output, run `npm run debug:build` to see detailed information about the build process.
+- Always ensure that `.nojekyll` file is created in the output directory to prevent GitHub Pages from ignoring files starting with underscore.
+
+For more details on deployment, see [DEPLOYMENT.md](DEPLOYMENT.md).

@@ -25,15 +25,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: "Build (includes export with output: 'export' config)"
+      - name: "Build Next.js app"
         run: npm run build
         env:
           GITHUB_PAGES: true
+
+      - name: "Debug directory contents"
+        run: |
+          echo "Current directory:"
+          ls -la
+          echo "Out directory (if exists):"
+          ls -la out || echo "Out directory does not exist"
+          echo ".next directory (if exists):"
+          ls -la .next || echo ".next directory does not exist"
+
+      - name: "Create out directory if it doesn't exist"
+        run: mkdir -p out
           
-      - name: Add .nojekyll file
+      - name: "Add .nojekyll file"
         run: touch out/.nojekyll
         
-      - name: Copy public directory contents to out
+      - name: "Copy public directory contents to out"
         run: cp -r public/* out/ || true
 
       - name: Deploy to GitHub Pages
