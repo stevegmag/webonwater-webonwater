@@ -21,10 +21,10 @@ const SimplePathDebugPage: React.FC = () => {
   }, []);
 
   // Test paths
-  const imagePath1 = getImagePath('/images/example.jpg');
-  const imagePath2 = getImagePath('images/example.jpg');
-  const videoPath1 = getImagePath('/videos/example.mp4');
-  const videoPath2 = getImagePath('videos/example.mp4');
+  const imagePath1 = getImagePath('/web_on_water_logo.png');
+  const imagePath2 = getImagePath('web_on_water_logo.png');
+  const videoPath1 = getImagePath('/videos/hero-background.mp4');
+  const videoPath2 = getImagePath('videos/hero-background.mp4');
 
   return (
     <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
@@ -96,10 +96,10 @@ const SimplePathDebugPage: React.FC = () => {
         <h2>Manual Tests</h2>
         <p>Try these direct paths in your browser:</p>
         <ul>
-          <li><a href="/webonwater-webonwater/images/example.jpg" target="_blank">/webonwater-webonwater/images/example.jpg</a></li>
-          <li><a href="/webonwater-webonwater/public/images/example.jpg" target="_blank">/webonwater-webonwater/public/images/example.jpg</a></li>
-          <li><a href="/webonwater-webonwater/videos/example.mp4" target="_blank">/webonwater-webonwater/videos/example.mp4</a></li>
-          <li><a href="/webonwater-webonwater/public/videos/example.mp4" target="_blank">/webonwater-webonwater/public/videos/example.mp4</a></li>
+          <li><a href="/webonwater-webonwater/images/web_on_water_logo.png" target="_blank">/webonwater-webonwater/images/example.jpg</a></li>
+          <li><a href="/webonwater-webonwater/public/images/web_on_water_logo.png" target="_blank">/webonwater-webonwater/public/images/example.jpg</a></li>
+          <li><a href="/webonwater-webonwater/videos/hero-background.mp4" target="_blank">/webonwater-webonwater/videos/example.mp4</a></li>
+          <li><a href="/webonwater-webonwater/public/videos/hero-background.mp4" target="_blank">/webonwater-webonwater/public/videos/example.mp4</a></li>
         </ul>
       </div>
     </div>

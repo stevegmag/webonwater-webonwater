@@ -100,6 +100,17 @@ section {
 .logo-name {
   font-size: 36px;
 }
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--color-light-khaki);
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--color-dark-flatblue);
+}
 
 /* We're replacing this with Next.js Image component
 span.logo {
