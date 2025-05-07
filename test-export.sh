@@ -2,15 +2,14 @@
 
 # Set environment variables for GitHub Pages export
 export GITHUB_PAGES=true
-export NODE_ENV=production
 
 # Clean previous build files
 rm -rf .next out
 
-# Build and export the application
+# Build and export the application 
+# With output: 'export' in next.config.js, next build will handle the export
 echo "Building and exporting Next.js application..."
 npm run build
-npm run export
 
 # Create .nojekyll file to prevent Jekyll processing
 touch out/.nojekyll
