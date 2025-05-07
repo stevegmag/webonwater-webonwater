@@ -4,12 +4,6 @@
 const basePath = process.env.GITHUB_PAGES === 'true' ? '/webonwater-webonwater' : '';
 const assetPrefix = process.env.GITHUB_PAGES === 'true' ? '/webonwater-webonwater/' : '';
 
-// Make basePath available to your code
-// This will be available on both client and server side
-const publicRuntimeConfig = {
-  basePath,
-};
-
 const nextConfig = {
   reactStrictMode: true,
   
@@ -27,13 +21,8 @@ const nextConfig = {
     unoptimized: true,
   },
   
-  // Make base path available to app code
-  publicRuntimeConfig,
-  
   // Disable trailing slashes
   trailingSlash: false,
 };
 
 module.exports = nextConfig;
-
-module.exports = nextConfig

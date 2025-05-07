@@ -27,9 +27,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses a special approach to handle static assets (images, videos, etc.) when deploying to GitHub Pages. Due to the subdirectory path structure of GitHub Pages, standard references to public assets won't work correctly.
 
-### Using the Image Utility
+# Using the Fixed Image Path Utility
 
-For any images, videos, or other assets from the public folder, use the provided TypeScript utility functions:
+The previous implementation that used `next/config` with `publicRuntimeConfig` caused runtime errors in newer versions of Next.js. The fixed implementation uses a client-side detection approach that works reliably across all environments.
+
+## Implementation Details
+
+The new implementation:
+
+1. Detects GitHub Pages environment by checking if the current hostname includes 'github.io'
+2. Applies the '/webonwater-webonwater' prefix only when on GitHub Pages
+3. Works without requiring any special configuration in next.config.js
+
+## How to Use
 
 ```tsx
 import { getImagePath, getMediaUrl } from '@/utils/imageUtils';
@@ -50,7 +60,17 @@ const MyComponent: React.FC = () => {
 };
 ```
 
-This ensures your assets will work correctly in both development and production environments.
+This approach has several advantages:
+- Works consistently in both development and production
+- No dependency on potentially unsupported Next.js features
+- No runtime errors with current Next.js versions
+- Simple client-side implementation that's easy to maintain
+
+## Important Notes
+
+- This implementation only adds the path prefix on GitHub Pages
+- For local development, paths are used as-is
+- The solution ensures images display correctly in both environments
 
 ### How It Works
 

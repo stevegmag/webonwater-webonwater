@@ -1,4 +1,7 @@
-import getConfig from 'next/config';
+/**
+ * Utility functions to handle image and media paths correctly
+ * for both development and GitHub Pages environments
+ */
 
 /**
  * Gets the proper path for an image in the public folder
@@ -8,14 +11,20 @@ import getConfig from 'next/config';
  * @returns {string} - The proper path with basePath prefix if needed
  */
 export function getImagePath(path: string): string {
-  const { publicRuntimeConfig } = getConfig();
-  const basePath = publicRuntimeConfig?.basePath || '';
-  
   // Make sure path starts with a slash
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   
-  // Return path with basePath prefix
-  return `${basePath}${normalizedPath}`;
+  // Check if we're in GitHub Pages environment
+  const isGitHubPages = typeof window !== 'undefined' && 
+    window.location.hostname.includes('github.io');
+  
+  // Add base path for GitHub Pages
+  if (isGitHubPages) {
+    return `/webonwater-webonwater${normalizedPath}`;
+  }
+  
+  // Return path as is for development
+  return normalizedPath;
 }
 
 /**
