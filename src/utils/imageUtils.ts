@@ -25,9 +25,10 @@ export function getImagePath(path: string): string {
     console.log('full path:', `/webonwater-webonwater${normalizedPath}`);
     return `/webonwater-webonwater${normalizedPath}`;
   }
-  
-  // Return path as is for development
-  return normalizedPath;
+  else {
+    console.log('full path:', normalizedPath);
+    return normalizedPath;
+  }
 }
 
 /**
