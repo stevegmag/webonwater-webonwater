@@ -8,28 +8,6 @@ import { getImagePath } from '@/utils/imageUtils';
 
 const cherryCreamSoda = Cherry_Cream_Soda({ subsets: ['latin'], weight: '400' });
 
-/*
-Fugaz One
-Original Surfer
-Luckiest Guy
-
-Fredoka
-Comfortaa
-Baloo 2 
-Righteous
-Bungee / Bungee Hairline
-Kalam
-Cherry Cream Soda
-
-Bubblegum Sans
-Sniglet
-Nunito (headers)
-Titan One
-Patrick Hand
-Varela Round
-Concert One
-*/
-
 export default function Header() {
   const [scrolled, setScrolled] = useState(false); 
 

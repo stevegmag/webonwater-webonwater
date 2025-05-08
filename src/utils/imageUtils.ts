@@ -22,6 +22,7 @@ export function getImagePath(path: string): string {
   
   // For GitHub Pages, try both the root and directly in images
   if (isGitHubPages) {
+    console.log('full path:', `/webonwater-webonwater${normalizedPath}`);
     return `/webonwater-webonwater${normalizedPath}`;
   }
   
