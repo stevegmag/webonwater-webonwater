@@ -18,7 +18,7 @@ export default function Footer() {
                 className="mr-2 p-0 rounded-full"
               />
               WebOnWater</h3>
-            <p className="px-2 mb-4">Fixing the web, one site at a time!</p>
+            <p className="px-2 mb-4 text-center">Fixing the web, one site at a time!</p>
             <br />
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <p className="px-2">

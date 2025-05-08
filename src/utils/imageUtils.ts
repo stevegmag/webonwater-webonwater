@@ -13,10 +13,12 @@
 export function getImagePath(path: string): string {
   // Make sure path starts with a slash
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  console.log('getImagePath called with path:', normalizedPath);
   
   // Check if we're in GitHub Pages environment
   const isGitHubPages = typeof window !== 'undefined' && 
     window.location.hostname.includes('github.io');
+    console.log('isGitHubPages:', isGitHubPages);
   
   // For GitHub Pages, try both the root and directly in images
   if (isGitHubPages) {

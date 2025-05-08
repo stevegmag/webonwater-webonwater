@@ -96,8 +96,8 @@ const SimplePathDebugPage: React.FC = () => {
         <h2>Manual Tests</h2>
         <p>Try these direct paths in your browser:</p>
         <ul>
-          <li><a href="/webonwater-webonwater/images/web_on_water_logo.png" target="_blank">/webonwater-webonwater/images/example.jpg</a></li>
-          <li><a href="/webonwater-webonwater/public/images/web_on_water_logo.png" target="_blank">/webonwater-webonwater/public/images/example.jpg</a></li>
+          <li><a href="/webonwater-webonwater/web_on_water_logo.png" target="_blank">/webonwater-webonwater/images/example.jpg</a></li>
+          <li><a href="/webonwater-webonwater/public/web_on_water_logo.png" target="_blank">/webonwater-webonwater/public/images/example.jpg</a></li>
           <li><a href="/webonwater-webonwater/videos/hero-background.mp4" target="_blank">/webonwater-webonwater/videos/example.mp4</a></li>
           <li><a href="/webonwater-webonwater/public/videos/hero-background.mp4" target="_blank">/webonwater-webonwater/public/videos/example.mp4</a></li>
         </ul>
