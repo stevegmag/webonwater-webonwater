@@ -14,8 +14,9 @@ export function getImagePath(path: string): string {
   // console.log('full path:', path);
 
   // Make sure path starts with a slash
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  let normalizedPath = path.startsWith('/') ? path : `/${path}`;
   // console.log('normalizedPath:', normalizedPath);
+  normalizedPath = (normalizedPath.startsWith('/images/') || normalizedPath.startsWith('/videos/')) ? normalizedPath : `/images/${normalizedPath}`;
   
   // Check if we're in GitHub Pages environment
   const isGitHubPages = typeof window !== 'undefined' && 
