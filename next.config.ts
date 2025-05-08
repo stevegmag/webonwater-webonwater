@@ -23,6 +23,11 @@ const nextConfig = {
   
   // Disable trailing slashes
   trailingSlash: false,
+  
+  // Make environment variables available to the browser
+  env: {
+    NEXT_PUBLIC_GITHUB_PAGES: process.env.GITHUB_PAGES
+  }
 };
 
 module.exports = nextConfig;

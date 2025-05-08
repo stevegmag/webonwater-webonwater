@@ -11,24 +11,23 @@
  * @returns {string} - The proper path with basePath prefix if needed
  */
 export function getImagePath(path: string): string {
-  // console.log('full path:', path);
-
   // Make sure path starts with a slash
   let normalizedPath = path.startsWith('/') ? path : `/${path}`;
 
   // If the path already starts with /images or /videos, don't add another layer... else assume it's an image and add that path
-  normalizedPath = (normalizedPath.startsWith('/images/') || normalizedPath.startsWith('/videos/')) ? normalizedPath : `/images/${normalizedPath}`;
-
-  console.log('normalizedPath:', normalizedPath);
+  normalizedPath = (normalizedPath.startsWith('/images/') || normalizedPath.startsWith('/videos/')) ? normalizedPath : `/images${normalizedPath}`;
   
-  // Check if we're in GitHub Pages environment
-  const isGitHubPages = typeof window !== 'undefined' && 
+  // Check if we're in GitHub Pages environment - use both build-time and runtime detection
+  const isGitHubPagesBuild = process.env.GITHUB_PAGES === 'true';
+  const isGitHubPagesRuntime = typeof window !== 'undefined' && 
     window.location.hostname.includes('github.io');
   
-  // For GitHub Pages, try both the root and directly in images
+  const isGitHubPages = isGitHubPagesBuild || isGitHubPagesRuntime;
+  
+  // For GitHub Pages, add the repository name prefix
   if (isGitHubPages) {    
-    const returnPath = '/webonwater-webonwater'+ normalizedPath;
-    // console.log('full path:', returnPath);
+    const returnPath = '/webonwater-webonwater' + normalizedPath;
+    console.log('GitHub Pages image path:', returnPath);
     return returnPath;
   }
   else {
