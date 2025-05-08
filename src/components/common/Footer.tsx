@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-6">
             <h3 className="text-xl font-bold mb-4 logo-container">
               <Image 
-                src={getImagePath('/web_on_water_logo.png')}
+                src={getImagePath('/images/web_on_water_logo.png')}
                 alt="Web on Water Logo"
                 width={40} 
                 height={40}

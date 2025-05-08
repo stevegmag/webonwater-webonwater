@@ -76,7 +76,7 @@ export default function LogosPage() {
             <div className={`bg-[var(--color-light-khaki)] p-4 rounded-md ${fontItem.font.className}`}>
               <Link href="/" className="wow-logo flex items-center">
                 <Image 
-                  src={getImagePath('/web_on_water_logo.png')}
+                  src={getImagePath('/images/web_on_water_logo.png')}
                   alt="Web on Water Logo"
                   width={80} 
                   height={80}
@@ -106,7 +106,7 @@ export default function LogosPage() {
         <div className="bg-[var(--color-light-khaki)] p-4 rounded-md">
           <Link href="/" className="wow-logo flex items-center">
             <Image 
-              src={getImagePath('/web_on_water_logo.png')}
+              src={getImagePath('/imgages/web_on_water_logo.png')}
               alt="Web on Water Logo"
               width={120} 
               height={120}
