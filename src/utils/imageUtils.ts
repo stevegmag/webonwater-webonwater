@@ -11,8 +11,11 @@
  * @returns {string} - The proper path with basePath prefix if needed
  */
 export function getImagePath(path: string): string {
+  // console.log('full path:', path);
+
   // Make sure path starts with a slash
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  // console.log('normalizedPath:', normalizedPath);
   
   // Check if we're in GitHub Pages environment
   const isGitHubPages = typeof window !== 'undefined' && 
@@ -21,11 +24,11 @@ export function getImagePath(path: string): string {
   // For GitHub Pages, try both the root and directly in images
   if (isGitHubPages) {    
     const returnPath = '/webonwater-webonwater'+ normalizedPath;
-    console.log('full path:', returnPath);
+    // console.log('full path:', returnPath);
     return returnPath;
   }
   else {
-    console.log('full path:', normalizedPath);
+    // console.log('full path:', normalizedPath);
     return normalizedPath;
   }
 }
