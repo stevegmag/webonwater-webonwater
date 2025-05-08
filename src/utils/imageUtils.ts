@@ -15,8 +15,11 @@ export function getImagePath(path: string): string {
 
   // Make sure path starts with a slash
   let normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  // console.log('normalizedPath:', normalizedPath);
+
+  // If the path already starts with /images or /videos, don't add another layer... else assume it's an image and add that path
   normalizedPath = (normalizedPath.startsWith('/images/') || normalizedPath.startsWith('/videos/')) ? normalizedPath : `/images/${normalizedPath}`;
+
+  console.log('normalizedPath:', normalizedPath);
   
   // Check if we're in GitHub Pages environment
   const isGitHubPages = typeof window !== 'undefined' && 
