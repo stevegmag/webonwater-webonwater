@@ -52,7 +52,6 @@ const fonts = [
   { name: "Baloo 2", font: baloo2 },
   { name: "Righteous", font: righteous },
   { name: "Bungee", font: bungee },
-  { name: "Bungee", font: bungee },
   { name: "Bungee Hairline", font: bungeeHairline },
   { name: "Kalam", font: kalam },
   { name: "Bubblegum Sans", font: bubblegumSans },
