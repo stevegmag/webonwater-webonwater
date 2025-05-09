@@ -1,0 +1,88 @@
+@import 'variables';
+
+// Responsive mixins
+@mixin sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: $breakpoint-2xl) {
+    @content;
+  }
+}
+
+// Typography mixins
+@mixin heading-1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  
+  @include md {
+    font-size: 3rem;
+  }
+  
+  @include lg {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin heading-2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  
+  @include md {
+    font-size: 2.25rem;
+  }
+  
+  @include lg {
+    font-size: 2.5rem;
+  }
+}
+
+// Common layout patterns
+@mixin container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $spacing-md;
+  padding-right: $spacing-md;
+  
+  @include lg {
+    padding-left: $spacing-xl;
+    padding-right: $spacing-xl;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -98,7 +98,7 @@ section {
   z-index: 1;
 }
 .logo-name {
-  font-size: 36px;
+  /* font-size: 36px; */
 }
 .logo-container {
   display: flex;

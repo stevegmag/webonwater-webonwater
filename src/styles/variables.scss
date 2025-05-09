@@ -1,0 +1,41 @@
+// Colors
+$background: #ededed;
+$foreground: #04152d;
+$color-primary: #577a99;
+$color-secondary: #2c3e50;
+$color-dark: #233140;
+$color-light-blue: #16b3d2;
+$color-med-blue: #018dbc;
+$color-dark-blue: #005680;
+$color-dark-flatblue: #385a6b;
+$color-light-khaki: #f8f6f1;
+$color-text: #ededed;
+$color-text-dark: #04152d;
+
+// Font families
+// These will be used alongside the imported Google fonts
+$font-sans: var(--font-sans, Arial, Helvetica, sans-serif);
+$font-serif: Georgia, 'Times New Roman', serif;
+$font-mono: monospace;
+
+// Breakpoints (matching Tailwind defaults)
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Z-index layers
+$z-index-header: 100;
+$z-index-modal: 200;
+$z-index-tooltip: 300;
+
+// Spacing
+$spacing-base: 8px;
+$spacing-xs: $spacing-base * 0.5;  // 4px
+$spacing-sm: $spacing-base;        // 8px
+$spacing-md: $spacing-base * 2;    // 16px
+$spacing-lg: $spacing-base * 3;    // 24px
+$spacing-xl: $spacing-base * 4;    // 32px
+$spacing-2xl: $spacing-base * 6;   // 48px
+$spacing-3xl: $spacing-base * 8;   // 64px

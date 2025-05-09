@@ -1,0 +1,114 @@
+/* Import Tailwind */
+@import "tailwindcss";
+
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+
+// CSS Variables for theming
+:root {
+  --background: #{$background};
+  --foreground: #{$foreground};
+  
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-dark: #{$color-dark};
+  --color-light-blue: #{$color-light-blue};
+  --color-med-blue: #{$color-med-blue};
+  --color-dark-blue: #{$color-dark-blue};
+  --color-dark-flatblue: #{$color-dark-flatblue};
+  --color-light-khaki: #{$color-light-khaki};
+
+  --color-text: #{$color-text};
+  --color-text-dark: #{$color-text-dark};
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #{$foreground};
+    --foreground: #{$background};
+  }
+}
+
+// Base styles
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: $font-sans;
+}
+
+// Layout elements
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-light-khaki);
+  color: var(--color-dark-flatblue);
+  z-index: $z-index-header;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  position: relative;
+  z-index: 10;
+}
+
+section {
+  position: relative;
+  z-index: 10;
+} 
+
+// Logo styles
+.wow-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo-name {
+  content: '';
+  // font-size: 36px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--color-light-khaki);
+  padding: $spacing-sm;
+  border-radius: $spacing-sm;
+  color: var(--color-dark-flatblue);
+}
+
+// Background effects
+._topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, .7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+._bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 350px;
+  min-width: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, .7);
+  filter: blur(100px);
+  z-index: 0;
+}

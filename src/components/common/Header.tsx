@@ -1,12 +1,9 @@
 "use client";
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { Cherry_Cream_Soda } from "next/font/google";
-import { getImagePath } from '@/utils/imageUtils';
+import LogoText from '@/components/common/LogoText';
 
-const cherryCreamSoda = Cherry_Cream_Soda({ subsets: ['latin'], weight: '400' });
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false); 
@@ -25,20 +22,8 @@ export default function Header() {
       scrolled ? 'bg-white shadow-md' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 py-1 flex justify-between items-center">
-        <Link href="/" className="wow-logo flex items-center">
-          <Image 
-            src={getImagePath('web_on_water_logo.png')}
-            alt="Web on Water Logo"
-            width={120} 
-            height={120}
-            className="mr-2"
-          />
-          <div className={`logo-name ${cherryCreamSoda.className}`}>
-            <span className="text-secondary font-bold">Web</span>
-            <span className="text-primary">On</span>
-            <span className="text-secondary font-bold">Water</span>
-          </div>
-        </Link>
+        <LogoText width="120" height="120" fontsize="41" />
+        
         <nav>
           <ul className="flex space-x-6">
             <li><Link href="/" className="hover:text-primary">Home</Link></li>

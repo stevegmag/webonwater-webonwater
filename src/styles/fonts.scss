@@ -1,0 +1,38 @@
+// Font styles
+.font-logo {
+  font-family: var(--font-cherry-cream-soda);
+}
+
+.font-heading {
+  font-family: var(--font-nunito);
+  font-weight: 700;
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
+
+// Text styles
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-light-blue {
+  color: var(--color-light-blue);
+}
+
+.text-med-blue {
+  color: var(--color-med-blue);
+}
+
+.text-dark-blue {
+  color: var(--color-dark-blue);
+}
+
+.text-dark-flatblue {
+  color: var(--color-dark-flatblue);
+}

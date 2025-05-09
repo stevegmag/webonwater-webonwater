@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { getImagePath } from '@/utils/imageUtils';
+import LogoText from '@/components/common/LogoText';
 
 export default function Footer() {
   return (
@@ -10,15 +9,9 @@ export default function Footer() {
           {/* Company info column - 25% width on desktop */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-6">
             <h3 className="text-xl font-bold mb-4 logo-container">
-              <Image 
-                src={getImagePath('/images/web_on_water_logo.png')}
-                alt="Web on Water Logo"
-                width={40} 
-                height={40}
-                className="mr-2 p-0 rounded-full"
-              />
-              WebOnWater</h3>
-            <p className="px-2 mb-4 text-center">Fixing the web, one site at a time!</p>
+              <LogoText width="46" height="46" fontsize="28" />
+            </h3>
+            <p className="px-2 mb-4 text-center">Fixing the48 web, one site at a time!</p>
             <br />
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <p className="px-2">
@@ -28,7 +21,7 @@ export default function Footer() {
           </div>
           
           {/* Quick links column - 25% width on desktop */}
-          <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-6">
+          <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-4 md:pl-10">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="px-2 space-y-2">
               <li><Link href="/" className="hover:underline">Home</Link></li>
