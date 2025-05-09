@@ -45,13 +45,13 @@ export default function Hero() {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-        Broken? <span className="text-(--color-light-blue)">Lost?</span> Adrift?
+          Broken? <span className="text-(--color-light-blue)">Lost?</span> Adrift?
         </h1>
         <h2 className="text-3xl md:text-4xl font-bold mb-4 uppercase">
           We <span className="text-(--color-light-blue)">fix</span> broken websites!
         </h2>
         <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
-          We are a <span className="text-(--color-light-blue)">full-service</span> design & development agency, but we specialize in rescuing and repairing existing websites, web applications, and marketing campaigns.
+          We are a <span className="text-(--color-light-blue)">full-service</span> design & development agency, but we specialize in rescuing and repairing existing websites, web applications, and SEO campaigns.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/contact">

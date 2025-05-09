@@ -5,6 +5,7 @@ import "./globals.css"; // Tailwind
 import "../styles/global.scss"; // SCSS styles
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const inter: NextFont = Inter({ subsets: ['latin'] });
 
@@ -21,11 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <div className="pt-24"> {/* Add padding-top to account for fixed header */}
-          {children}
-        </div>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <div className="pt-24">
+            {children}
+          </div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

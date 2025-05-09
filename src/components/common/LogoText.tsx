@@ -24,7 +24,7 @@ export default function LogoText(props: { width ?: string, height ?: string, fon
         className="mr-2"
       />
       <div className={`logo-name ${cherryCreamSoda.className}`} style={{ fontSize: fontsize ? `${logoFontSize}px` : '36px' }}>
-        <span className="text-secondary font-bold">Web</span>
+        <span className="text-secondary font-bold" >Web</span>
         <span className="text-primary">On</span>
         <span className="text-secondary font-bold">Water</span>
       </div>

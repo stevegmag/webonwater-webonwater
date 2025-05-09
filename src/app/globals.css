@@ -1,8 +1,6 @@
-@import "tailwindcss";
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
-
+@tailwind utilities;
 
 :root {
   --background: #ededed;
@@ -10,31 +8,42 @@
   
   --color-primary: #577a99;
   --color-secondary: #2c3e50;
-  --color-dark:  #233140;
-/* logo colors */
+  --color-dark: #233140;
   --color-light-blue: #16b3d2;
   --color-med-blue: #018dbc;
   --color-dark-blue: #005680;
   --color-dark-flatblue: #385a6b;
-  /* --color-light-khaki: #f9f5f2; */
   --color-light-khaki: #f8f6f1;
-
   --color-text: #ededed;
   --color-text-dark: #04152d;
+  
+  /* Hero is always dark blue */
+  --hero-background: var(--color-dark-blue);
+  --hero-text: var(--color-text);
+  
+  /* Service section colors - light mode (default) */
+  --service-container-bg: var(--color-light-khaki);
+  --service-card-bg: white;
+  --service-card-text: var(--color-dark-blue);
+  
+  /* Footer colors - light mode (default) */
+  --footer-bg: var(--color-light-khaki);
+  --footer-text: var(--color-dark-blue);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #04152d;
-    --foreground: #ededed;
-  }
+/* Dark mode */
+.dark {
+  --background: #04152d;
+  --foreground: #ededed;
+  
+  /* Service section colors - dark mode */
+  --service-container-bg: var(--color-light-khaki);
+  --service-card-bg: var(--color-dark-blue);
+  --service-card-text: white;
+  
+  /* Footer colors - dark mode */
+  --footer-bg: var(--color-dark-blue);
+  --footer-text: white;
 }
 
 body {
@@ -43,6 +52,7 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
+/* Header is always khaki with dark blue text */
 header {
   position: fixed;
   top: 0;
@@ -57,7 +67,6 @@ header {
 main {
   position: relative;
   z-index: 10;
-  /* top: 128px; */
 }
 
 section {
@@ -65,41 +74,34 @@ section {
   z-index: 10;
 } 
 
-._topBlur {
-  position: absolute;
-  width: 50vw;
-  height: 50vw;
-  min-width: 350px;
-  top: -128px;
-  left: -10vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, .7);
-  filter: blur(100px);
-  z-index: 0;
+/* Hero section is always dark blue */
+.hero-section {
+  background-color: var(--hero-background);
+  color: var(--hero-text);
 }
 
-._bottomBlur {
-  position: absolute;
-  width: 70vw;
-  height: 50vw;
-  min-width: 350px;
-  min-width: 250px;
-  top: 246px;
-  right: -25vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, .7);
-  filter: blur(100px);
-  z-index: 0;
+/* Services section styling */
+.services-section {
+  background-color: var(--service-container-bg);
 }
+
+.service-card {
+  background-color: var(--service-card-bg);
+  color: var(--service-card-text);
+}
+
+/* Logo styles */
 .wow-logo {
   position: relative;
   display: flex;
   align-items: center;
   z-index: 1;
 }
+
 .logo-name {
-  /* font-size: 36px; */
+  content: '';
 }
+
 .logo-container {
   display: flex;
   flex-direction: row;
@@ -111,17 +113,3 @@ section {
   border-radius: 8px;
   color: var(--color-dark-flatblue);
 }
-
-/* We're replacing this with Next.js Image component
-span.logo {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-  margin-right: 8px;
-  background-image: url('/web_on_water_logo.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 2;
-}
-*/

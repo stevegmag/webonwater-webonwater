@@ -1,58 +1,38 @@
-import Link from 'next/link';
+"use client";
 
-const services = [
-  {
-    title: 'Web Design',
-    description: 'Strategic, user-centered designs that combine aesthetic appeal with conversion-focused functionality. We create responsive experiences that engage your audience across all devices.',
-    icon: '🎨',
-    link: '/services#design'
-  },
-  {
-    title: 'Web Development',
-    description: 'Custom websites and applications engineered with modern frameworks like React, Vue, and Node.js. We build scalable, maintainable solutions that deliver exceptional performance.',
-    icon: '💻',
-    link: '/services#development'
-  },
-  {
-    title: 'Web Repair',
-    description: 'Comprehensive troubleshooting and remediation for broken websites and abandoned projects. We solve complex technical issues, refactor problematic code, and revitalize stalled developments.',
-    icon: '🔧',
-    link: '/services#repair'
-  },
-  {
-    title: 'Performance & Accessibility Audits',
-    description: 'Technical analysis of Core Web Vitals, server response times, and WCAG compliance. We transform sluggish, inaccessible websites into fast, inclusive experiences that reach all users.',
-    icon: '📊',
-    link: '/services#performance'
-  },
-  {
-    title: 'SEO & Marketing Campaigns',
-    description: 'Data-driven interventions to repair underperforming SEO and rescue failing marketing campaigns. We implement technical optimizations and strategic adjustments to drive measurable traffic increases.',
-    icon: '📈',
-    link: '/services#seo'
-  }
-];
+import { services } from '@/data/services';
+import { FaCode, FaTools, FaRocket, FaChartLine, FaShieldAlt, FaLaptopCode } from 'react-icons/fa';
+import { FaPaintbrush } from 'react-icons/fa6';
 
 export default function Services() {
+  // Map to convert string icon names to actual React components
+  const iconMap = {
+    FaPaintbrush: <FaPaintbrush className="text-4xl mb-4" />,
+    FaCode: <FaCode className="text-4xl mb-4" />,
+    FaTools: <FaTools className="text-4xl mb-4" />,
+    FaRocket: <FaRocket className="text-4xl mb-4" />,
+    FaChartLine: <FaChartLine className="text-4xl mb-4" />,
+    FaShieldAlt: <FaShieldAlt className="text-4xl mb-4" />,
+    FaLaptopCode: <FaLaptopCode className="text-4xl mb-4" />
+  };
+
   return (
-    <section className="py-16">
+    <section className="services-section py-16">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-          <p className="max-w-2xl mx-auto">
-            We offer a range of services to help your business succeed online.
-          </p>
-        </div>
+        <h2 className="text-3xl font-bold text-center mb-8 text-[var(--color-dark-flatblue)]">
+          Our Services
+        </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-              <p className="mb-4">{service.description}</p>
-              <Link href={service.link} className="text-primary hover:underline">
-                Learn more →
-              </Link>
+        <div className="flex flex-col md:flex-row md:flex-wrap justify-center max-w-6xl mx-auto">
+          {services.map((service) => (
+            <div key={service.id} className="service-card basis-1 md:basis-1/3 rounded-lg shadow-lg p-6 transition-transform hover:scale-105 duration-150 ease-in-out w-full m-2">
+              <div className="text-center">
+                {iconMap[service.icon as keyof typeof iconMap]}
+                <h3 className="text-xl font-bold mb-3">
+                  {service.title}
+                </h3>
+                <p>{service.description}</p>
+              </div>
             </div>
           ))}
         </div>

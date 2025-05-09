@@ -7,9 +7,7 @@
 
 // CSS Variables for theming
 :root {
-  --background: #{$background};
-  --foreground: #{$foreground};
-  
+  // Common colors that don't change with theme
   --color-primary: #{$color-primary};
   --color-secondary: #{$color-secondary};
   --color-dark: #{$color-dark};
@@ -18,17 +16,44 @@
   --color-dark-blue: #{$color-dark-blue};
   --color-dark-flatblue: #{$color-dark-flatblue};
   --color-light-khaki: #{$color-light-khaki};
-
-  --color-text: #{$color-text};
-  --color-text-dark: #{$color-text-dark};
+  
+  // Hero is always dark blue
+  --hero-background: #{$color-text-dark};
+  --hero-text: #{$color-text};
+  
+  // Theme-specific colors
+  --background: #{$foreground};
+  --foreground: #{$background};
+  
+  // Service section colors - dark mode (default)
+  --service-container-bg: #{$color-light-khaki};
+  --service-card-bg: #{$color-text-dark};
+  --service-card-text: #{$color-text};
+  
+  // Footer colors - dark mode (default)
+  --footer-bg: #{$color-text-dark};
+  --footer-text: #{$color-text};
+  --footer-logo-bg: #{$color-light-khaki};
+  --footer-logo-text: #{$color-dark-flatblue};
 }
 
-// Dark mode
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #{$foreground};
-    --foreground: #{$background};
-  }
+// Light mode when .dark class is not present
+:root:not(.dark) {
+  --background: #{$background};
+  --foreground: #{$foreground};
+  
+  // Hero is always dark blue
+  --hero-background: #{$color-text-dark};
+  --hero-text: #{$color-text};
+  
+  // Service section colors - light mode
+  --service-container-bg: #{$color-light-khaki};
+  --service-card-bg: white;
+  --service-card-text: #{$color-dark-blue};
+  
+  // Footer colors - light mode
+  --footer-bg: #{$color-light-khaki};
+  --footer-text: #{$color-dark-blue};
 }
 
 // Base styles
@@ -60,6 +85,22 @@ section {
   z-index: 10;
 } 
 
+// Hero section
+.hero-section {
+  background-color: var(--hero-background);
+  color: var(--hero-text);
+}
+
+// Services section
+.services-section {
+  background-color: var(--service-container-bg);
+}
+
+.service-card {
+  background-color: var(--service-card-bg);
+  color: var(--service-card-text);
+}
+
 // Logo styles
 .wow-logo {
   position: relative;
@@ -70,7 +111,6 @@ section {
 
 .logo-name {
   content: '';
-  // font-size: 36px;
 }
 
 .logo-container {

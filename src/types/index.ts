@@ -28,7 +28,7 @@ export interface TestimonialItem {
   quote: string;
   author: string;
   company: string;
-  avatarUrl?: string;
+  icon?: string;
 }
 
 export interface BlogPost {
