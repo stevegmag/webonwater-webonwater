@@ -2,8 +2,11 @@
 
 import Link from 'next/link';
 import LogoText from '@/components/common/LogoText';
+import { useTheme } from '@/context/ThemeContext';
 
 export default function Footer() {
+  const { theme } = useTheme();
+  
   return (
     <footer style={{ backgroundColor: 'var(--footer-bg)', color: 'var(--footer-text)' }} className="py-12">
       <div className="container mx-auto px-4">
@@ -11,7 +14,9 @@ export default function Footer() {
 
           {/* Company info column */}
           <div className="w-full md:w-1/4 mb-8 md:mb-0 md:pr-6">
-            <div className="bg-[var(--color-light-khaki)] text-[var(--color-dark-flatblue)] p-4 rounded-lg mb-4">
+            <div className={`bg-[var(--color-light-khaki)] text-[var(--color-dark-flatblue)] p-4 rounded-lg mb-4 ${
+              theme === 'light' ? 'outline outline-2 outline-[var(--color-text-dark)]' : ''
+            }`}>
               <LogoText width="46" height="46" fontsize="28" />
               <p className="text-center mt-2">Fixing the web, one site at a time!</p>
             </div>

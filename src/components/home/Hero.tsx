@@ -27,7 +27,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center bg-gradient-to-r from-secondary to-primary text-white overflow-hidden">
+    <section className="relative h-screen flex items-center bg-gradient-to-r from-[var(--color-text-dark)] to-[var(--color-med-blue)] text-white overflow-hidden">
       {/* Background Video - only shown on laptop/desktop */}
       {!isMobile && (
         <div className="absolute inset-0 z-0 opacity-40">

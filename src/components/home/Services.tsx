@@ -27,7 +27,7 @@ export default function Services() {
           {services.map((service) => (
             <div key={service.id} className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
               <div className="service-card h-full rounded-lg shadow-lg p-6 transition-transform hover:scale-105 duration-150 ease-in-out">
-                <div className="text-center">
+                <div className="flex flex-col items-center text-center">
                   {iconMap[service.icon as keyof typeof iconMap]}
                   <h3 className="text-xl font-bold mb-3">
                     {service.title}
