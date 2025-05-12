@@ -24,7 +24,7 @@ export const services: ServiceItem[] = [
   },
   {
     id: "performance-optimization",
-    title: "Performance &Accessibility Audits",
+    title: "Performance & Accessibility Audits",
     description: "Technical analysis of Core Web Vitals, server response times, and WCAG compliance. We transform sluggish, inaccessible websites into fast, inclusive experiences that reach all users.Speed up your website, improve SEO, and enhance user experience through technical optimization.",
     icon: "FaRocket",
     slug: "performance-optimization"
