@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables' as *;
 
 // Responsive mixins
 @mixin sm {

@@ -1,9 +1,11 @@
-/* Import Tailwind */
-@import "tailwindcss";
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'fonts' as *;
 
-@import 'variables';
-@import 'mixins';
-@import 'fonts';
+/* Import Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 // CSS Variables for theming
 :root {

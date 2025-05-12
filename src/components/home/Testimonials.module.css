@@ -1,0 +1,19 @@
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .testimonialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonialGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

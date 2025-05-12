@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Inter } from "next/font/google";
-import "./globals.css"; // Tailwind
-import "../styles/global.scss"; // SCSS styles
+// Import only one CSS file that includes Tailwind
+import "../styles/global.scss"; // SCSS styles with Tailwind
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
