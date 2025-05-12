@@ -17,7 +17,10 @@ export default function Testimonials() {
         
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.slice(0, 3).map((testimonial) => (
+            {testimonials
+              .sort(() => Math.random() - 0.5)
+              .slice(0, 3)
+              .map((testimonial) => (
               <div 
                 key={testimonial.id} 
                 className="rounded-lg shadow-lg p-6 transition-transform duration-150 hover:scale-105"
