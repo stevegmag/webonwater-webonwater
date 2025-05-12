@@ -21,7 +21,7 @@ export default function LogoText(props: { width ?: string, height ?: string, fon
         alt="Web on Water Logo"
         width={logoWidth} 
         height={logoHeight}
-        className="mr-2"
+        className="hidden sm:block mr-2 "
       />
       <div className={`logo-name ${cherryCreamSoda.className}`} style={{ fontSize: fontsize ? `${logoFontSize}px` : '36px' }}>
         <span className="text-secondary font-bold" >Web</span>

@@ -42,7 +42,7 @@ export default function Footer() {
           {/* Technologies column */}
           <div className="w-full md:w-1/2">
             <h4 className="text-lg font-semibold mb-4">Specializing in the following development stacks / platforms:</h4>
-            <div className="px-4 flex flew-row flex-no-wrap">
+            <div className="px-2 flex flex-col sm:flex-row flex-no-wrap gap-6">
               <div className="w-full sm:w-1/2">
                 <ul className="space-y-2">
                   <li>React | Vue | SolidJS | Svelte</li>
