@@ -45,10 +45,10 @@ export default function Footer() {
             <div className="px-2 flex flex-col sm:flex-row flex-no-wrap gap-6">
               <div className="w-full sm:w-1/2">
                 <ul className="space-y-2">
-                  <li>React | Vue | SolidJS | Svelte</li>
+                  <li>React | Vue | SolidJS | Svelte | Angular</li>
                   {/* <li>Next.js | Nuxt.js | Astro</li> */}
                   <li>JavaScript | TypeScript | jQuery | Alpine.js</li>
-                  {/* <li>Node.js | Express | NestJS</li> */}
+                  <li>Node.js | Express | NestJS</li>
                   <li>PHP | Laravel | Symfony</li>
                   {/* <li>Python | Django | Flask</li> */}
                   <li>HTML | CSS | Sass/SCSS | LESS </li>
