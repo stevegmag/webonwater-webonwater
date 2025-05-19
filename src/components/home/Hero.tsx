@@ -51,7 +51,7 @@ export default function Hero() {
           We <span className="text-[var(--color-light-blue)]">fix</span> broken websites!
         </h2>
         <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">
-          We are a <span className="text-[var(--color-light-blue)]">full-service</span> design & development agency, but we specialize in rescuing and repairing existing websites, web applications, and SEO campaigns.
+          We are a <span className="font-bold text-[var(--color-light-blue)]">full-service</span> design & development agency, but we specialize in rescuing and repairing existing websites, web applications, and SEO campaigns.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/contact">
@@ -60,7 +60,7 @@ export default function Hero() {
           <Link href="/contact/audit">
             <Button>Request an Audit</Button>
           </Link><Link href="/contact/sos">
-            <Button primary>••• --- ••• </Button>
+            <Button primary aria-label="Emergency SOS! HELP!">••• --- ••• </Button>
           </Link>
         </div>
       </div>
