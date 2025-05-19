@@ -46,25 +46,25 @@ export default function Footer() {
               <div className="w-full sm:w-1/2">
                 <ul className="space-y-2">
                   <li>React | Vue | SolidJS | Svelte</li>
-                  <li>Next.js | Nuxt.js | Astro</li>
+                  {/* <li>Next.js | Nuxt.js | Astro</li> */}
                   <li>JavaScript | TypeScript | jQuery | Alpine.js</li>
-                  <li>Node.js | Express | NestJS</li>
+                  {/* <li>Node.js | Express | NestJS</li> */}
                   <li>PHP | Laravel | Symfony</li>
-                  <li>Python | Django | Flask</li>
+                  {/* <li>Python | Django | Flask</li> */}
                   <li>HTML | CSS | Sass/SCSS | LESS </li>
                   <li>Bootstrap | Tailwind CSS | *UIKits</li>
-                  <li>GraphQL | REST | SOAP</li>
-                  <li>Jest | Vitest | Cypress | Playwright</li>
+                  {/* <li>GraphQL | REST | SOAP</li> */}
+                  {/* <li>Jest | Vitest | Cypress | Playwright</li> */}
                 </ul>
               </div>
               <div className="w-full sm:w-1/2 mt-4 sm:mt-0">
                 <ul className="space-y-2">
-                  <li>Vite | Webpack | Rollup</li>
-                  <li>MySQL | PostgreSQL | MongoDB</li>
-                  <li>Git | GitHub | GitLab</li>
-                  <li>NPM | Yarn | PNPM | Gulp</li>
-                  <li>Docker | CI/CD | Cloudflare</li>
-                  <li>Netlify | Vercel | AWS | DigitalOcean</li>
+                  {/* <li>Vite | Webpack | Rollup</li> */}
+                  {/* <li>MySQL | PostgreSQL | MongoDB</li> */}
+                  {/* <li>Git | GitHub | GitLab</li> */}
+                  {/* <li>NPM | Yarn | PNPM | Gulp</li> */}
+                  {/* <li>Docker | CI/CD | Cloudflare</li> */}
+                  {/* <li>Netlify | Vercel | AWS | DigitalOcean</li> */}
                   <li>Drupal | WordPress | Headless CMS | Custom CMS</li>
                   <li>Shopify | WooCommerce | HubSpot | Mailchimp</li>
                   <li>Squarespace | Wix | Webflow</li>
