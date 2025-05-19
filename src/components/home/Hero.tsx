@@ -55,10 +55,12 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/contact">
-            <Button primary>Get Started</Button>
+            <Button primary>Start a Project</Button>
           </Link>
-          <Link href="/portfolio">
-            <Button>View Our Work</Button>
+          <Link href="/contact/audit">
+            <Button>Request an Audit</Button>
+          </Link><Link href="/contact/sos">
+            <Button primary>••• --- ••• </Button>
           </Link>
         </div>
       </div>
