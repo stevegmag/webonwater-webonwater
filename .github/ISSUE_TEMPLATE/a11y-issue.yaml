@@ -8,8 +8,8 @@ body:
   attributes:
     value: "# MHV Accessibility Issue Ticket"
 - type: markdown
-  label: "## General Reference Materials:"
   attributes:
+    label: "## General Reference Materials:"
     value: |
     - [VADS Components Documentation](https://design.va.gov/components/) (VA Design System)
     - [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs) (VA Design System)
