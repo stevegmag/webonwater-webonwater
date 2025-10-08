@@ -1,0 +1,108 @@
+name: "MHV Accessibility Issue Ticket"
+description: "Report or create an accessibility issue ticket for MHV"
+title: "[a11y-defect-x]: MHV:[Product]: [Issue description]"
+labels: ["accessibility", needs-refinement]
+assignees: ["steveg-IAT", "sarahhortonadhoc"]
+body:
+- type: markdown
+  attributes:
+    value: Here's a [list of common issue tickets](https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/platform/accessibility/common-issues) you can reference, copy, and add to. 
+- type: markdown
+  attributes:
+    value: "## Possible tasks"
+- type: markdown
+  attributes:
+    value: |
+      1. Review, refine and acknowledge feedback.
+      1. Update ticket information (assignee, labels, project(s), etc.)
+      1. Fix and/or document decisions made.
+      1. Product manager will move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
+      1. Accessibility specialist will close ticket after reviewing documented decisions / validating fix.
+- type: input
+  id: contact
+  attributes:
+    label: Point of contact
+    description: The person who wrote or is responsible for this ticket. Usually an a11y specialist.
+    placeholder: "Name (GitHub ID) - steveg-IAT | sarahhortonadhoc"
+  validations:
+    required: true
+- type: dropdown
+  id: severity
+  attributes:
+    label: Severity level
+    description: "Don't forget to add a corresponding label to this ticket once it's created"
+    options:
+      - 0, Launchblocker. Potentially Harmful. Must be fixed immediately.
+      - 1, Launchblocker. Critical. Must be fixed before launch.
+      - 2, Serious. Should be fixed in 1-2 sprints post-launch.
+      - 3, Moderate. Should be fixed in 1-3 sprints post-launch.
+      - 4, Minor. Consider fixing or exploring in 2-4 sprints post-launch.
+- type: textarea
+  id: details
+  attributes:
+    label: Details
+    description: "Describe the issue and what problem it's creating. If you have a screenshot or video, add those here after the ticket is created."
+    placeholder: "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
+    value: |
+      ...
+- type: textarea
+  id: repro
+  attributes:
+    label: Reproduction steps
+    description: "How do you trigger this issue? Please walk us through it step by step. Include any relevant device, browser, and assistive technology."
+    value: |
+      1.
+      2.
+      3.
+      ...
+- type: textarea
+  id: vads
+  attributes:
+    label: VADS / USWDS componentdocumentation references
+    description: "Provide links to relevant component documentation"
+    value: |
+      1.
+      2.
+      3.
+      ...
+- type: textarea
+  id: solution
+  attributes:
+    label: Proposed solution or next steps
+    description: "If there is an easy HTML, CSS, or JavaScript markup fix, add it after creating this ticket. If it is a longer fix or you do not have a ready solution, provide next steps."
+    value: |
+      ...
+- type: textarea
+  id: references
+  attributes:
+    label: References, articles, or WCAG support
+    description: "Provide any relevant documentation or evidence as to why this is an issue or how to fix it"
+    value: |
+      1.
+      2.
+      3.
+      ...
+- type: checkboxes
+  id: type
+  attributes:
+    label: Type of issue
+    description: You may select more than one.
+    options:
+      - label: Axe-core | Lighthouse | WAVE
+      - label: Screenreader | assistive tech & device support
+      - label: Keyboard
+      - label: Voice command
+      - label: Zoom
+      - label: Color, typography, & visual elements
+      - label: Components and pattern standards
+      - label: Content organization
+      - label: Focus
+      - label: Headings
+      - label: Content style guide
+      - label: Link and button labels
+      - label: Semantic HTML
+      - label: Markup and metadata
+      - label: Non-text content and media
+      - label: Overall user experience
+      - label: Cognitive | confusing flow or content
+      - label: Something else
