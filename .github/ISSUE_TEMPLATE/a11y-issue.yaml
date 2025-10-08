@@ -6,6 +6,9 @@ assignees: ["steveg-IAT", "sarahhortonadhoc"]
 body:
 - type: markdown
   attributes:
+    value: "# MHV Accessibility Issue Ticket"
+- type: markdown
+  attributes:
     value: "## General Reference Materials: |
     - [VADS Components Documentation](https://design.va.gov/components/) (VA Design System)
     - [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs) (VA Design System)
@@ -14,7 +17,7 @@ body:
     "
 - type: markdown
   attributes:
-    value: "## Possible tasks"
+    value: "### Possible tasks"
 - type: markdown
   attributes:
     value: |
