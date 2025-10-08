@@ -7,17 +7,6 @@ body:
 - type: markdown
   attributes:
     value: "# MHV Accessibility Issue Ticket"
-
-    
-- type: markdown
-  attributes:
-    value: |
-      - [ ] Be sure to add all the appropriate labels to include: 
-        - **MHV-[product]**
-        - **a11y-defect-[severity]**
-        - **wcag-[SC]**
-      - [ ] Set the issue type [issue | bug]
-      - [ ] Set the Project(s) [to include MHV - Shared Support
     
 - type: markdown
   attributes:
@@ -40,6 +29,12 @@ body:
     value: |
       1. [ ] Review, refine and acknowledge feedback.
       1. [ ] Update ticket information (assignee, labels, project(s), etc.)
+        - [ ] Be sure to add all the appropriate labels to include: 
+          - **MHV-[product]**
+          - **a11y-defect-[severity]**
+          - **wcag-[SC]**
+        - [ ] Set the issue type [issue | bug]
+        - [ ] Set the Project(s) [to include MHV - Shared Support
       1. [ ] Fix and/or document decisions made.
       1. [ ] Product manager to move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
       1. [ ] Accessibility specialist will close ticket after reviewing documented decisions / validating fix.
