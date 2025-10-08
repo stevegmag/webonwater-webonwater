@@ -10,18 +10,6 @@ body:
     
 - type: markdown
   attributes:
-    value: "## General Reference Materials:"
-    
-- type: markdown
-  attributes:
-    value: |
-      - VADS: [VADS Components Documentation](https://design.va.gov/components/)
-      - VADS: [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs)
-      - VA Platform Docs: [Accessibility defect severity rubric](https://depo-platform-documentation.scrollhelp.site/developer-docs/accessibility-defect-severity-rubric)
-      - VA Github Docs: [List of common issue tickets](https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/platform/accessibility/common-issues) you can reference, copy, and add to.
-
-- type: markdown
-  attributes:
     value: "### Possible tasks"
     
 - type: markdown
@@ -29,12 +17,6 @@ body:
     value: |
       1. [ ] Review, refine and acknowledge feedback.
       1. [ ] Update ticket information (assignee, labels, project(s), etc.)
-        - [ ] Be sure to add all the appropriate labels to include: 
-          - **MHV-[product]**
-          - **a11y-defect-[severity]**
-          - **wcag-[SC]**
-        - [ ] Set the issue type [issue | bug]
-        - [ ] Set the Project(s) [to include MHV - Shared Support
       1. [ ] Fix and/or document decisions made.
       1. [ ] Product manager to move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
       1. [ ] Accessibility specialist will close ticket after reviewing documented decisions / validating fix.
@@ -140,3 +122,17 @@ body:
       - label: Overall user experience
       - label: Cognitive | confusing flow or content
       - label: Something else
+
+    
+- type: markdown
+  attributes:
+    value: "## General Reference Materials:"
+    
+- type: markdown
+  attributes:
+    value: |
+      - VADS: [VADS Components Documentation](https://design.va.gov/components/)
+      - VADS: [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs)
+      - VA Platform Docs: [Accessibility defect severity rubric](https://depo-platform-documentation.scrollhelp.site/developer-docs/accessibility-defect-severity-rubric)
+      - VA Github Docs: [List of common issue tickets](https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/platform/accessibility/common-issues) you can reference, copy, and add to.
+
