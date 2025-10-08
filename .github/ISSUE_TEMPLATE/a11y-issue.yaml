@@ -6,7 +6,7 @@ assignees: ["steveg-IAT", "sarahhortonadhoc"]
 body:
 - type: markdown
   attributes:
-    value: "General Reference Materials:
+    value: "## General Reference Materials: |
     - [VADS Components Documentation](https://design.va.gov/components/) (VA Design System)
     - [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs) (VA Design System)
     - [Accessibility defect severity rubric](https://depo-platform-documentation.scrollhelp.site/developer-docs/accessibility-defect-severity-rubric)
