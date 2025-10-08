@@ -9,7 +9,7 @@ body:
     value: "# MHV Accessibility Issue Ticket"
 - type: markdown
   attributes:
-    label: "## General Reference Materials:"
+    value: "## General Reference Materials:"
 - type: markdown
   attributes:
     value: |
