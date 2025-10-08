@@ -10,7 +10,13 @@ body:
     
 - type: markdown
   attributes:
-    value: "Be sure to add all the appropriate labels to include: **__MHV-[product]__**, **__a11y-defect-[severity]__**, **__wcag-[SC]__**"
+    value: |
+      Be sure to add all the appropriate labels to include: 
+        - **MHV-[product]**
+        - **a11y-defect-[severity]**
+        - **wcag-[SC]**
+      Set the issue type [issue | bug]
+      Set the Project(s) [to include MHV - Shared Support
     
 - type: markdown
   attributes:
