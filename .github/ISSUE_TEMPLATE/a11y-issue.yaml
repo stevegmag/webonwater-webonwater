@@ -159,6 +159,7 @@ body:
 - type: markdown
   attributes:
     value: |
+      - USWDS Docs: [USWDS Documentation](https://designsystem.digital.gov/)
       - VADS Docs: [VADS Components Documentation](https://design.va.gov/components/)
       - VADS Docs: [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs)
       - VA Platform Docs: [Accessibility defect severity rubric](https://depo-platform-documentation.scrollhelp.site/developer-docs/accessibility-defect-severity-rubric)
