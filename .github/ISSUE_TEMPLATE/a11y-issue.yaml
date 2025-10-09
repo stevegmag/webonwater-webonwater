@@ -1,7 +1,8 @@
 name: "MHV Accessibility Issue Ticket"
-description: "Report or create an accessibility issue ticket for MHV"
+description: "Please use this form to report or create an accessibility issue ticket for MHV"
 title: "[a11y-defect-x]: MHV:[Product]: [Issue description]"
 labels: ["accessibility", "a11y-testing", "needs-refinement"]
+projects: ["department-of-veterans-affairs/1748"]
 assignees: ["steveg-IAT", "sarahhortonadhoc"]
 body:
 - type: markdown
@@ -60,8 +61,8 @@ body:
 - type: textarea
   id: details
   attributes:
-    label: User Story or Problem Statement
-    description: "Illustrate how to defect affects users. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
+    label: User story or problem statement
+    description: "Illustrate how the defect affects users. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
     placeholder: "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
     value: |
       ...
@@ -70,7 +71,7 @@ body:
   id: repro
   attributes:
     label: Reproduction steps
-    description: "How do you trigger this issue? Please walk us through it step by step. Include any relevant device, browser, and assistive technology."
+    description: "How do you trigger this issue? Please walk us through it step by step. Include test user, any relevant device, browser, and assistive technology."
     value: |
       1.
       2.
@@ -82,7 +83,7 @@ body:
 - type: textarea
   id: evidence
   attributes:
-    label: Supporting Screenshots or videos
+    label: Supporting screenshots or videos
     description: "Attach any supporting material. An annotated picture is worth a 1,000 meetings."
 
 - type: textarea
