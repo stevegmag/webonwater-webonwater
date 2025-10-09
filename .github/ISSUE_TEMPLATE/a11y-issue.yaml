@@ -39,7 +39,7 @@ body:
   id: severity
   attributes:
     label: Severity level
-    description: "Don't forget to add a corresponding label to this ticket once it's created"
+    description: "Don't forget to add a corresponding label to this ticket once it's created (a11y-defect-0, a11y-defect-1, etc.)"
     options:
       - 0, Launchblocker. Potentially Harmful. Must be fixed immediately.
       - 1, Launchblocker. Critical. Must be fixed before launch.
@@ -55,7 +55,7 @@ body:
 - type: textarea
   id: details
   attributes:
-    label: User Story / Problem Details
+    label: User Story or Problem Statement
     description: "Describe the issue and what problem it's creating. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
     placeholder: "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
     value: |
@@ -92,7 +92,7 @@ body:
   id: references
   attributes:
     label: References, articles, or WCAG support
-    description: "Provide any relevant documentation, VADS component, or other evidence as to why this is an issue or how to fix it"
+    description: "Provide any relevant documentation, VADS component, or other evidence as to why this is an issue or how to fix it. Don't forget to add a corresponding label(s) to this ticket once it's created. (wcag-1.1.1, 508-issue-cognition, etc)."
     value: |
       1.
       2.
@@ -103,7 +103,7 @@ body:
   id: type
   attributes:
     label: Type of issue
-    description: You may select more than one.
+    description: "You may select more than one. Don't forget to add a corresponding label(s) to this ticket once it's created. (wcag-1.1.1, 508-issue-cognition, etc)..
     options:
       - label: Axe-core | Lighthouse | WAVE
       - label: Perceivable
@@ -160,4 +160,3 @@ body:
       - VA Github Docs: [List of common issue tickets](https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/platform/accessibility/common-issues) you can reference, copy, and add to.
       - W3C Docs: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
       - W3C Docs: [WCAG 2.2 Understanding Docs](https://www.w3.org/WAI/WCAG22/Understanding/)
-
