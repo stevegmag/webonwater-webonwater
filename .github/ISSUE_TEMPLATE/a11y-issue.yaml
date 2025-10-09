@@ -30,7 +30,7 @@ body:
   attributes:
     value: |
       ---
-      
+
 - type: input
   id: contact
   attributes:
@@ -61,7 +61,7 @@ body:
   id: details
   attributes:
     label: User Story or Problem Statement
-    description: "Describe the issue and what problem it's creating. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
+    description: "Illustrate how to defect affects users. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
     placeholder: "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
     value: |
       ...
