@@ -55,7 +55,7 @@ body:
 - type: textarea
   id: details
   attributes:
-    label: Details
+    label: User Story / Problem Details
     description: "Describe the issue and what problem it's creating. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
     placeholder: "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
     value: |
@@ -92,7 +92,7 @@ body:
   id: references
   attributes:
     label: References, articles, or WCAG support
-    description: "Provide any relevant documentation or evidence as to why this is an issue or how to fix it"
+    description: "Provide any relevant documentation, VADS component, or other evidence as to why this is an issue or how to fix it"
     value: |
       1.
       2.
@@ -127,6 +127,20 @@ body:
       - label: Overall user experience
       - label: Cognitive | confusing flow or content
       - label: Something else
+
+- type: markdown
+  attributes:
+    value: |
+      ---
+      
+- type: markdown
+  attributes:
+    value: "### Accpetance criteria"
+    
+- type: markdown
+  attributes:
+    value: |
+      1. [ ] TBD.
 
 - type: markdown
   attributes:
