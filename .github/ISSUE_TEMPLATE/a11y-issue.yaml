@@ -42,11 +42,16 @@ body:
       - 3, Moderate. Should be fixed in 1-3 sprints post-launch.
       - 4, Minor. Consider fixing or exploring in 2-4 sprints post-launch.
 
+- type: markdown
+  attributes:
+    value: |
+    ---
+    
 - type: textarea
   id: details
   attributes:
     label: Details
-    description: "Describe the issue and what problem it's creating. If you have a screenshot or video, add those here after the ticket is created."
+    description: "Describe the issue and what problem it's creating. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
     placeholder: "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
     value: |
       ...
@@ -65,19 +70,8 @@ body:
 - type: textarea
   id: evidence
   attributes:
-    label: Screenshots or videos
+    label: Supporting Screenshots or videos
     description: "Attach any supporting material. An annotated picture is worth a 1,000 meetings."
-
-- type: textarea
-  id: vads
-  attributes:
-    label: VADS / USWDS componentdocumentation references
-    description: "Provide links to relevant component documentation"
-    value: |
-      1.
-      2.
-      3.
-      ...
 
 - type: textarea
   id: solution
@@ -127,6 +121,10 @@ body:
       - label: Cognitive | confusing flow or content
       - label: Something else
 
+- type: markdown
+  attributes:
+    value: |
+    ---
     
 - type: markdown
   attributes:
