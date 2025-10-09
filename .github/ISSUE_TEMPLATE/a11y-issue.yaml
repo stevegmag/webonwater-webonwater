@@ -26,6 +26,11 @@ body:
       1. [ ] Product manager to move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
       1. [ ] Accessibility specialist will close ticket after reviewing documented decisions / validating fix.
 
+- type: markdown
+  attributes:
+    value: |
+      ---
+      
 - type: input
   id: contact
   attributes:
