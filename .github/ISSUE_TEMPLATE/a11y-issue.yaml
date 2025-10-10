@@ -13,7 +13,7 @@ body:
   attributes:
     value: |      
       > [!TIP]
-      > Title: [a11y-defect-SEVERITY]: MHV:[Product > MR | Meds | SM | SS]: [Issue description]
+      > Title format: [a11y-defect-SEVERITY]: MHV:[Product > MedRecs | Meds | SecMess | SS]: [Brief Issue description]
     
 - type: checkboxes
   id: tasks
