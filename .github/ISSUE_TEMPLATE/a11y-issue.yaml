@@ -59,7 +59,7 @@ body:
     label: User story or problem statement
     description: "Illustrate how the defect affects users. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
     value: |
-      "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
+      As a [user role], I am trying to [action] so that [goal], but [what is happening]
       ...
 
 - type: textarea
