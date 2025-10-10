@@ -8,6 +8,12 @@ body:
 - type: markdown
   attributes:
     value: "# MHV Accessibility Issue Ticket"
+
+- type: markdown
+  attributes:
+    value: |      
+      > [!TIP]
+      > Title: [a11y-defect-SEVERITY]: MHV:[Product]: [Issue description]
     
 - type: checkboxes
   id: tasks
