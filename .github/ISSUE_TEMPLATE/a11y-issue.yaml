@@ -8,7 +8,7 @@ body:
 - type: markdown
   attributes:
     value: "# MHV Accessibility Issue Ticket"
-      
+
 - type: markdown
   attributes:
     value: "### Possible tasks"
@@ -66,7 +66,7 @@ body:
   id: repro
   attributes:
     label: Reproduction steps
-    description: "How do you trigger this issue? Please walk us through it step by step. Include test user, any relevant device, browser, and assistive technology."
+    description: "How do you trigger this issue? Please walk us through it step by step. Include test user and any relevant device, browser, and assistive technology."
     value: |
       1.
       2.
@@ -80,6 +80,8 @@ body:
   attributes:
     label: Supporting screenshots or videos
     description: "Attach any supporting material. An annotated picture is worth a 1,000 meetings."
+    value: |
+      ...
 
 - type: textarea
   id: solution
@@ -156,6 +158,7 @@ body:
   attributes:
     value: |
       - USWDS Docs: [USWDS Documentation](https://designsystem.digital.gov/)
+      - VADS Docs: [VADS Experience Standards](https://design.va.gov/components/)
       - VADS Docs: [VADS Components Documentation](https://design.va.gov/components/)
       - VADS Docs: [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs)
       - VA Platform Docs: [Accessibility defect severity rubric](https://depo-platform-documentation.scrollhelp.site/developer-docs/accessibility-defect-severity-rubric)
