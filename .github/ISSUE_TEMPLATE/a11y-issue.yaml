@@ -30,7 +30,7 @@ body:
 - type: input
   id: contact
   attributes:
-    label: 🔗Point of contact
+    label: 🔗 Point of contact
     description: The person who wrote or is responsible for this ticket. Usually an a11y specialist.
     placeholder: "Name (GitHub ID) - steveg-IAT | sarahhortonadhoc"
   validations:
@@ -39,7 +39,7 @@ body:
 - type: dropdown
   id: severity
   attributes:
-    label: ⚠️Severity level
+    label: ⚠️ Severity level
     description: "Don't forget to add a corresponding label to this ticket once it's created (a11y-defect-0, a11y-defect-1, etc.)"
     options:
       - 0, Launchblocker. Potentially Harmful. Must be fixed immediately.
