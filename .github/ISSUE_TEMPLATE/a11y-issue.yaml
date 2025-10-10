@@ -8,11 +8,6 @@ body:
 - type: markdown
   attributes:
     value: "# MHV Accessibility Issue Ticket"
-
-- type: markdown
-  attributes:
-    value: |
-      ---
       
 - type: markdown
   attributes:
@@ -63,8 +58,8 @@ body:
   attributes:
     label: User story or problem statement
     description: "Illustrate how the defect affects users. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
-    placeholder: "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
     value: |
+      "As a [user role], I am trying to [action] so that [goal], but [what is happening]"
       ...
 
 - type: textarea
