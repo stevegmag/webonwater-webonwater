@@ -11,7 +11,7 @@ body:
 
 - type: markdown
   attributes:
-    value: "### Possible tasks"
+    value: "### ✅ Possible tasks"
     
 - type: markdown
   attributes:
