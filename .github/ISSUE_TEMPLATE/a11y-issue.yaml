@@ -157,18 +157,17 @@ body:
     
 - type: markdown
   attributes:
-    value: "### 🔎 General Reference Materials:"
+    value: "#### 🔎 General Reference Materials:"
     
 - type: markdown
   attributes:
     value: |
-      <details><summary>🔎 General Reference Materials:</summay>
-        - USWDS Docs: [USWDS Documentation](https://designsystem.digital.gov/)
-        - VADS Docs: [VADS Experience Standards](https://design.va.gov/components/)
-        - VADS Docs: [VADS Components Documentation](https://design.va.gov/components/)
-        - VADS Docs: [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs)
-        - VA Platform Docs: [Accessibility defect severity rubric](https://depo-platform-documentation.scrollhelp.site/developer-docs/accessibility-defect-severity-rubric)
-        - VA Github Docs: [List of common issue tickets](https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/platform/accessibility/common-issues) you can reference, copy, and add to.
-        - W3C Docs: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
-        - W3C Docs: [WCAG 2.2 Understanding Docs](https://www.w3.org/WAI/WCAG22/Understanding/)
-      </details>
+      - USWDS Docs: [USWDS Documentation](https://designsystem.digital.gov/)
+      - VADS Docs: [VADS Experience Standards](https://design.va.gov/components/)
+      - VADS Docs: [VADS Components Documentation](https://design.va.gov/components/)
+      - VADS Docs: [VADS Components Storybook](https://design.va.gov/storybook/?path=/docs/about-introduction--docs)
+      - VA Platform Docs: [Accessibility defect severity rubric](https://depo-platform-documentation.scrollhelp.site/developer-docs/accessibility-defect-severity-rubric)
+      - VA Github Docs: [List of common issue tickets](https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/platform/accessibility/common-issues) you can reference, copy, and add to.
+      - W3C Docs: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
+      - W3C Docs: [WCAG 2.2 Understanding Docs](https://www.w3.org/WAI/WCAG22/Understanding/)
+
