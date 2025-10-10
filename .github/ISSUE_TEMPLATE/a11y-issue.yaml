@@ -30,7 +30,7 @@ body:
 - type: input
   id: contact
   attributes:
-    label: Point of contact
+    label: 🔗Point of contact
     description: The person who wrote or is responsible for this ticket. Usually an a11y specialist.
     placeholder: "Name (GitHub ID) - steveg-IAT | sarahhortonadhoc"
   validations:
@@ -39,7 +39,7 @@ body:
 - type: dropdown
   id: severity
   attributes:
-    label: Severity level
+    label: ⚠️Severity level
     description: "Don't forget to add a corresponding label to this ticket once it's created (a11y-defect-0, a11y-defect-1, etc.)"
     options:
       - 0, Launchblocker. Potentially Harmful. Must be fixed immediately.
@@ -68,7 +68,7 @@ body:
 - type: textarea
   id: repro
   attributes:
-    label: Reproduction steps
+    label:  ✅ Reproduction steps
     description: "How do you trigger this issue? Please walk us through it step by step. Include test user and any relevant device, browser, and assistive technology."
     value: |
       1.
@@ -81,7 +81,7 @@ body:
 - type: textarea
   id: evidence
   attributes:
-    label: Supporting screenshots or videos
+    label: 🌌 Supporting screenshots or videos
     description: "Attach any supporting material. An annotated picture is worth a 1,000 meetings."
     value: |
       ...
@@ -89,7 +89,7 @@ body:
 - type: textarea
   id: solution
   attributes:
-    label: Proposed solution or next steps
+    label: 𝌣Proposed solution or next steps
     description: "If there is an easy HTML, CSS, or JavaScript markup fix, add it after creating this ticket. If it is a longer fix or you do not have a ready solution, provide next steps."
     value: |
       ...
@@ -97,7 +97,7 @@ body:
 - type: textarea
   id: references
   attributes:
-    label: References, articles, or WCAG support
+    label: 🔎 References, articles, or WCAG support
     description: "Provide any relevant documentation, VADS component, or other evidence as to why this is an issue or how to fix it. Don't forget to add a corresponding label(s) to this ticket once it's created. (wcag-1.1.1, 508-issue-cognition, etc)."
     value: |
       1.
@@ -108,7 +108,7 @@ body:
 - type: checkboxes
   id: type
   attributes:
-    label: Type of issue
+    label:  ✅ Type of issue
     description: "You may select more than one. Don't forget to add a corresponding label(s) to this ticket once it's created. (wcag-1.1.1, 508-issue-cognition, etc).."
     options:
       - label: Axe-core | Lighthouse | WAVE
@@ -141,7 +141,7 @@ body:
       
 - type: markdown
   attributes:
-    value: "### Acceptance criteria"
+    value: "### ✅ Acceptance criteria"
     
 - type: markdown
   attributes:
@@ -155,7 +155,7 @@ body:
     
 - type: markdown
   attributes:
-    value: "### General Reference Materials:"
+    value: "### 🔎 General Reference Materials:"
     
 - type: markdown
   attributes:
