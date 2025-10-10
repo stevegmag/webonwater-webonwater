@@ -12,13 +12,13 @@ body:
 - type: checkboxes
   id: tasks
   attributes:
-    label:  ✅ Possible tasks"
-    options: |
-      1. [ ] Review, refine and acknowledge feedback.
-      1. [ ] Update ticket information (title, assignee, labels, project(s), etc.)
-      1. [ ] Fix and/or document decisions made.
-      1. [ ] Product manager to move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
-      1. [ ] Accessibility specialist will close ticket after reviewing documented decisions / validating fix.
+    label:  ✅ Possible tasks
+    options:
+      - 1. [ ] Review, refine and acknowledge feedback.
+      - 1. [ ] Update ticket information (title, assignee, labels, project(s), etc.)
+      - 1. [ ] Fix and/or document decisions made.
+      - 1. [ ] Product manager to move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
+      - 1. [ ] Accessibility specialist will close ticket after reviewing documented decisions / validating fix.
 
 - type: markdown
   attributes:
