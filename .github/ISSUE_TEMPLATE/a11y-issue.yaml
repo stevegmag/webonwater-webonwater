@@ -137,14 +137,12 @@ body:
     value: |
       ---
       
-- type: markdown
+- type: checkboxes
+  id: type
   attributes:
-    value: "### ✅ Acceptance criteria"
-    
-- type: markdown
-  attributes:
-    value: |
-      1. [ ] TBD.
+    label:  ✅ Acceptance criteria
+    options:
+      - label: TBD
 
 - type: markdown
   attributes:
