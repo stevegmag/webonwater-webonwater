@@ -11,18 +11,16 @@ body:
 
 - type: markdown
   attributes:
+    label: ''
     value: |            
       > [!TIP]
       > Title format: [a11y-defect-SEVERITY]: MHV:[Product > MedRecs | Meds | SecMess | SS]: [Brief Issue description]
 
 - type: markdown
   attributes:
+    label: ''
     value: |
-      ---
-
-- type: markdown
-  attributes:
-    value: |
+      ## Issue Description
       ---
     
 - type: textarea
@@ -42,14 +40,14 @@ body:
     label: 📝 Problem statement
     description: "Illustrate how the defect affects users. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
     value: |
-      but [what is actually happening]
+      [Instead of of the desired action, this happens...]
       ...
 
 
 - type: markdown
   attributes:
     value: |
-      ## Recommended Actions
+      ## Details
       ---
 
 - type: textarea
