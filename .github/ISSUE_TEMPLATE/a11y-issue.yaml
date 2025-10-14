@@ -2,9 +2,8 @@ name: "MHV Accessibility Issue Ticket"
 description: "Please use this form to report or create an accessibility issue ticket for MHV"
 title: "[a11y-defect-x]: MHV:[Product]: [Issue description]"
 labels: ["accessibility", "a11y-testing", "needs-refinement"]
-projects: ["stevegmag/projects/1"]
-assignees: ["stevegmag"]
-status: ["Icebox"]
+projects: ["department-of-veterans-affairs/1748"]
+assignees: ["steveg-IAT", "sarahhortonadhoc"]
 body:
 - type: markdown
   attributes:
@@ -15,17 +14,6 @@ body:
     value: |      
       > [!TIP]
       > Title format: [a11y-defect-SEVERITY]: MHV:[Product > MedRecs | Meds | SecMess | SS]: [Brief Issue description]
-    
-- type: checkboxes
-  id: tasks
-  attributes:
-    label:  ✅ Possible tasks
-    options:
-      - label: Review, refine and acknowledge feedback.
-      - label: Update ticket information (title, assignee, labels, project(s), etc.)
-      - label: Fix and/or document decisions made.
-      - label: Product manager to move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
-      - label: Accessibility specialist will close ticket after reviewing documented decisions / validating fix.
 
 - type: markdown
   attributes:
@@ -110,35 +98,6 @@ body:
       3.
       ...
 
-- type: checkboxes
-  id: type
-  attributes:
-    label:  ✅ Type of issue
-    description: "You may select more than one. Don't forget to add a corresponding label(s) to this ticket once it's created. (wcag-1.1.1, 508-issue-cognition, etc).."
-    options:
-      - label: Axe-core | Lighthouse | WAVE
-      - label: Perceivable
-      - label: Operable
-      - label: Understandable
-      - label: Robust
-      - label: Screenreader | assistive tech & device support
-      - label: Keyboard
-      - label: Voice command
-      - label: Zoom
-      - label: Color, typography, & visual elements
-      - label: Components and pattern standards
-      - label: Content organization
-      - label: Focus
-      - label: Headings
-      - label: Form
-      - label: Link and button labels
-      - label: Semantic HTML
-      - label: Markup and metadata
-      - label: Non-text content and media
-      - label: Overall user experience
-      - label: Cognitive | confusing flow or content
-      - label: Something else
-
 - type: markdown
   attributes:
     value: |
@@ -154,15 +113,30 @@ body:
 - type: markdown
   attributes:
     value: |
+      ## Next Steps
       ---
-    
+
+- type: checkboxes
+  id: tasks
+  attributes:
+    label:  ✅ Possible tasks
+    options:
+      - label: Review, refine and acknowledge feedback.
+      - label: Update ticket information (title, assignee, labels, project(s), etc.)
+      - label: Fix and/or document decisions made.
+      - label: Product manager to move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
+      - label: Accessibility specialist will close ticket after reviewing documented decisions / validating fix.    
+
 - type: markdown
   attributes:
-    value: "#### 🔎 General Reference Materials:"
+    value: "### 🔎 Supporting resources:"
     
 - type: markdown
   attributes:
     value: |
+      ### 🔎 Supporting resources:
+      > [!NOTE]
+      > **QUICK SUMMARY:** _Helpful links to documentation_
       - USWDS Docs: [USWDS Documentation](https://designsystem.digital.gov/)
       - VADS Docs: [VADS Experience Standards](https://design.va.gov/components/)
       - VADS Docs: [VADS Components Documentation](https://design.va.gov/components/)
