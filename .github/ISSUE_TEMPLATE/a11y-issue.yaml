@@ -11,8 +11,8 @@ body:
 
 - type: markdown
   attributes:
-    value: |      
-      > [!TIP]
+    label: "> [!TIP]"
+    value: |            
       > Title format: [a11y-defect-SEVERITY]: MHV:[Product > MedRecs | Meds | SecMess | SS]: [Brief Issue description]
 
 - type: markdown
