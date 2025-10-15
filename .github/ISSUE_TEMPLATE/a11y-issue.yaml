@@ -5,6 +5,7 @@ labels: ["accessibility", "a11y-testing", "needs-refinement"]
 projects: ["department-of-veterans-affairs/1748"]
 assignees: ["steveg-IAT", "sarahhortonadhoc"]
 body:
+
 - type: markdown
   attributes:
     value: "# MHV Accessibility Issue Ticket"
@@ -153,3 +154,4 @@ body:
       - VA Github Docs: [List of common issue tickets](https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/platform/accessibility/common-issues) you can reference, copy, and add to.
       - W3C Docs: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
       - W3C Docs: [WCAG 2.2 Understanding Docs](https://www.w3.org/WAI/WCAG22/Understanding/)
+
