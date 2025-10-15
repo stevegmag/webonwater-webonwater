@@ -5,7 +5,6 @@ labels: ["accessibility", "a11y-testing", "needs-refinement"]
 projects: ["department-of-veterans-affairs/1748"]
 assignees: ["steveg-IAT", "sarahhortonadhoc"]
 body:
-
 - type: markdown
   attributes:
     value: "# MHV Accessibility Issue Ticket"
@@ -37,7 +36,7 @@ body:
   attributes:
     label: 📝 Problem statement
     description: "Illustrate how the defect affects users. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
-    value: |
+    placeholder: |
       [Instead of the desired action, this happens...]
       ...
 
@@ -46,7 +45,7 @@ body:
   attributes:
     label: 🌌 Supporting screenshots or videos
     description: "Attach any supporting material. An annotated picture is worth a 1,000 meetings."
-    value: |
+    placeholder: |
       [Add screenshot or video here]
       ...
 
@@ -55,7 +54,7 @@ body:
   attributes:
     label:  👣 Reproduction steps
     description: "How do you trigger this issue? Please walk us through it step by step. Include test user and any relevant device, browser, and assistive technology."
-    value: |
+    placeholder: |
       1. Using [browser] with [assistive technology] as [test user],
       2. Navigate to... this page
       3. Navigate to...
@@ -91,7 +90,7 @@ body:
   attributes:
     label: 🔎 Relevant standards
     description: "Provide any relevant documentation, VADS component, or other evidence as to why this is an issue or how to fix it. Don't forget to add a corresponding label(s) to this ticket once it's created. (wcag-1.1.1, 508-issue-cognition, etc)."
-    value: |
+    placeholder: |
       #### Accessibility Standards
       1. [Understanding WCAG 2.2 (W3C)](https://www.w3.org/WAI/WCAG22/Understanding/)
       2.
@@ -115,7 +114,7 @@ body:
   attributes:
     label: 𝌣 Proposed solution or next steps
     description: "If there is an easy HTML, CSS, or JavaScript markup fix, add it after creating this ticket. If it is a longer fix or you do not have a ready solution, provide next steps."
-    value: |
+    placeholder: |
       [Do this action to bring the issue into compliance.]
       ...
       
@@ -124,7 +123,7 @@ body:
   attributes:
     label:  ✅ Acceptance criteria
     description: "What will success look like?"
-    value: |
+    placeholder: |
       - The system displays...
       - The system provides...
       - The user can...
@@ -154,4 +153,3 @@ body:
       - VA Github Docs: [List of common issue tickets](https://github.com/department-of-veterans-affairs/va.gov-team/tree/master/platform/accessibility/common-issues) you can reference, copy, and add to.
       - W3C Docs: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
       - W3C Docs: [WCAG 2.2 Understanding Docs](https://www.w3.org/WAI/WCAG22/Understanding/)
-
