@@ -86,7 +86,7 @@ body:
 - type: textarea
   id: references
   attributes:
-    label: 🔎 RRelevant standards
+    label: 🔎 Relevant standards
     description: "Provide any relevant documentation, VADS component, or other evidence as to why this is an issue or how to fix it. Don't forget to add a corresponding label(s) to this ticket once it's created. (wcag-1.1.1, 508-issue-cognition, etc)."
     value: |
       #### Accessibility Standards
@@ -127,6 +127,7 @@ body:
   attributes:
     value: |
       ## Next Steps
+      ---
 
 - type: checkboxes
   id: tasks
