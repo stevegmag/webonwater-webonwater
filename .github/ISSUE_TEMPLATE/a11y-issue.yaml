@@ -26,7 +26,7 @@ body:
   attributes:
     label: 📝 User story
     description: "Define the user story. Don't forget the 'SO THAT' statement."
-    value: |
+    placeholder: |
       As a [user role], 
       I want to [action]       
       so that [I can achive mygoal]
