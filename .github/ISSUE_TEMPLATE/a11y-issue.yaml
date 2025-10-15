@@ -123,12 +123,6 @@ body:
     options:
       - label: TBD
 
-- type: markdown
-  attributes:
-    value: |
-      ## Next Steps
-      ---
-
 - type: checkboxes
   id: tasks
   attributes:
