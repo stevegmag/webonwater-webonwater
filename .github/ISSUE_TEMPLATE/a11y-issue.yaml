@@ -28,14 +28,14 @@ body:
     placeholder: |
       As a [user role], 
       I want to [action]       
-      so that [I can achive mygoal]
+      so that [I can achieve my goal]
       ...
     
 - type: textarea
   id: problem
   attributes:
     label: 📝 Problem statement
-    description: "Illustrate how the defect affects users. If you have a screenshot or video, add those here and/or to the attachements field after the ticket is created."
+    description: "Illustrate how the defect affects users. If you have a screenshot or video, add those here and/or to the attachments field after the ticket is created."
     placeholder: |
       [Instead of the desired action, this happens...]
       ...
@@ -133,11 +133,11 @@ body:
   attributes:
     label: ✅ Possible tasks
     options:
-      - label: Review, refine and acknowledge feedback.
+      - label: Review, refine, and acknowledge feedback.
       - label: Update ticket information (title, assignee, labels, project(s), etc.)
       - label: Fix and/or document decisions made.
       - label: Product manager to move ticket in their respective product board to 'QA/A11y Review' after reviewing documented decisions / validating fix.
-      - label: Accessibility specialist will close ticket after reviewing documented decisions / validating fix.    
+      - label: Accessibility specialist will close the ticket after reviewing documented decisions / validating the fix.    
     
 - type: markdown
   attributes:
