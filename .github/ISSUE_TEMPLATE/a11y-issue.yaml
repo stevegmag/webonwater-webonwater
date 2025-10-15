@@ -19,7 +19,6 @@ body:
   attributes:
     value: |
       ## Issue Description
-      ---
     
 - type: textarea
   id: details
@@ -47,6 +46,7 @@ body:
     label: 🌌 Supporting screenshots or videos
     description: "Attach any supporting material. An annotated picture is worth a 1,000 meetings."
     value: |
+      [Add screenshot or video here]
       ...
 
 - type: textarea
@@ -56,10 +56,10 @@ body:
     description: "How do you trigger this issue? Please walk us through it step by step. Include test user and any relevant device, browser, and assistive technology."
     value: |
       1. Using [browser] with [assistive technology] as [test user],
-      1. Navigate to... this page
-      1. Navigate to...
-      1. Use component...
-      1. Notice issue...  
+      2. Navigate to... this page
+      3. Navigate to...
+      4. Use component...
+      5. Notice issue...  
       ...
   validations:
     required: true
@@ -92,10 +92,10 @@ body:
     description: "Provide any relevant documentation, VADS component, or other evidence as to why this is an issue or how to fix it. Don't forget to add a corresponding label(s) to this ticket once it's created. (wcag-1.1.1, 508-issue-cognition, etc)."
     value: |
       #### Accessibility Standards
-      1.
+      1. [Understanding WCAG 2.2 (W3C)](https://www.w3.org/WAI/WCAG22/Understanding/)
       2.
       #### Experience Standards
-      1.
+      1. [VA Design System Experience Standards](https://design.va.gov/about/experience-standards/)
       2.
       ...
 
@@ -108,7 +108,6 @@ body:
   attributes:
     value: |
       ## Recommended Actions
-      ---
 
 - type: textarea
   id: solution
