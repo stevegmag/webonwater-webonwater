@@ -55,9 +55,10 @@ body:
     label:  👣 Reproduction steps
     description: "How do you trigger this issue? Please walk us through it step by step. Include test user and any relevant device, browser, and assistive technology."
     value: |
-      1.
-      2.
-      3.
+      1. Navigate to... this page
+      2. Navigate to...
+      3. Use component...
+      4. Notice issue...  
       ...
   validations:
     required: true
@@ -67,7 +68,7 @@ body:
   attributes:
     label: 🔗 Point of contact
     description: The person who wrote or is responsible for this ticket. Usually an a11y specialist.
-    placeholder: "Name (GitHub ID) - steveg-IAT | sarahhortonadhoc"
+    placeholder: "Name (GitHub ID) - Sarah Horton (@sarahhortonadhoc) | Steven Gallagher (@steveg-IAT)"
   validations:
     required: true
 
@@ -116,12 +117,15 @@ body:
     value: |
       ...
       
-- type: checkboxes
+- type: textarea
   id: acceptance
   attributes:
     label:  ✅ Acceptance criteria
-    options:
-      - label: TBD
+    description: "What will success look like?"
+    value: |
+      - The system displays...
+      - The system provides...
+      - The user can...
 
 - type: checkboxes
   id: tasks
